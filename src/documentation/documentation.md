@@ -27,3 +27,14 @@ Vi har tänkt använda oss utav en mall när vi skapar PR's, mallens grund ser u
 **Allmänt**
 
 * Boka in möte för sprint-planering, review, retrorespektiv, backlog-planering.
+
+**[2024-12-16]**
+
+**Beslut** 
+
+* Vi tänker att vi ska ha ett "retro" tema på våran sida. 
+* Vi kommer att köra på grunden utav Hacker Escape Rooms som vi tidigare skapat.
+* Vi har valt Västerås som våran ort.
+* Kommunikation hanteras i stor del i gruppkonversationer genom Teams eller Discord, vi håller även våra mötesanteckningar uppdaterade. För brainstorming kommer vi dels använda oss utav Miro.com. ([Länk till Miro](https://miro.com/welcomeonboard/REFpaHZjTzNPd3RLeHlObi9rak9GVWl2aG1ZOEUrc2ZRVFlVdnQzZnpnYzMvOTJQQmc0Z2kxeW01YmQzL3d6RDBCOFppZzhiL2VNUHZoQ3ZhdnQwT0tMRlBzN3lNT0dQMVM1d1NSVWdaNDc2OGRMTk1hL1BBOVZyVkIyM016LzEhZQ==?share_link_id=248403105488))
+* Det vi känner att vi tar med oss ifrån Hacker Escape Rooms är utvecklingen i programmeringen och uppfattningen hur det är att jobba i grupp och på ett agilt sätt. 
+* Vi kommer att göra en Figma för att alla ska få ett humm över hur designen är tänkt att se ut, (Jörgen har börjat på ett). ([Länk till Figman] ([Länk till Figman](https://www.figma.com/design/nCpYeIBpP1drNOLVK7NE0u/Untitled?node-id=0-1&m=dev&t=XK83SFFemZeXMZ0k-1))

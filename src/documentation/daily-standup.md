@@ -1,23 +1,3 @@
-**[2024-12-13]** - Standup
-* Elena - 
-* Nils -
-* Tobias - 
-* Magnus -
-* Jörgen - 
-* Taru -
-* Bekhal -  
-
-
-**[2024-12-16]** - Standup
-* Elena - 
-* Nils -
-* Tobias - 
-* Magnus -
-* Jörgen - 
-* Taru -
-* Bekhal -  
-
-
 **[2024-12-17]** - Standup
 * Elena - 
 * Nils -
