@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Yesteryear&display=swap');
+
+$color-red: #c43c3a; // Same for hover
+$color-beige: #f1ddc5;
+$color-cyan: #70a2aa;
+$color-orange: #f2753b;
+$color-dark-blue: #1a323c;
+
+// Breakpoints
+$breakpoint-large: 992px;
+
+@mixin breakpoint($point) {
+    @if $point == large {
+        @media (max-width: $breakpoint-large) { @content; }
+    }
+}
+
+// Exempel på hur man kan använda Breakpoint ifrån en mixin. 
+// .div_example {
+
+//     @include breakpoint(large) {
+//         width: 100px;
+//     }
+// }
+
+// Font mixins
+@mixin font-yester() {
+    font-family: "Yesteryear", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin font-poppins() {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin font-poppins-semibold() {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+}
