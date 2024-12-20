@@ -5,6 +5,7 @@
 * Minst 2 stycken ska ha reviewat och approveat din kod innan din PR ska få mergeas.
 * Tydliga commits så att man enkelt ska kunna se vad personen har commit & vad ändringarna innefattar. 
 * Tider för daily standups: 14:00
+* Vi kommer att använda oss utav BEM gällande classnamn för styling
 
 Vi har tänkt använda oss utav en mall när vi skapar PR's, mallens grund ser ut på följande sätt:
 
