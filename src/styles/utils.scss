@@ -11,7 +11,7 @@ $breakpoint-large: 992px;
 
 @mixin breakpoint($point) {
     @if $point == large {
-        @media (max-width: $breakpoint-large) { @content; }
+        @media (min-width: $breakpoint-large) { @content; }
     }
 }
 
