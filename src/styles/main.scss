@@ -1,1 +1,12 @@
 @use './utils.scss' as *;
+
+body{
+background-color: $color-background;
+
+li{
+    list-style: none;
+}
+a{
+text-decoration: none;
+}
+}
