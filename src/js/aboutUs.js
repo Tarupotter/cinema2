@@ -1,14 +1,17 @@
-const getAboutUSInfo = async () => {
-  try {
-    const res = await fetch('/database/aboutUs.json'); // Ensure this path is correct relative to server root
-    if (!res.ok) {
-      throw new Error(`HTTP error! status: ${res.status}`);
-    }
-    const data = await res.json();
-    console.log(data);
-  } catch (error) {
-    console.error('Error fetching aboutUs.json:', error);
-  }
-};
+import {
+  currentLanguage,
+  toggleLanguage,
+  fetchData,
+} from './helpers/languageManager';
 
-getAboutUSInfo();
+const aboutUsContainer= document.querySelector('#about-us-container')
+const languageTogglerBtn = document.createElement('button');
+
+const loadAboutUsItems = async (language) =>
+{
+    const data = await fetchData( '/database/aboutUs.json' )
+     const { introduction, origin, vision } = data.aboutUs[language];
+    console.log(introduction, origin, vision)
+}
+
+loadAboutUsItems('sv')
