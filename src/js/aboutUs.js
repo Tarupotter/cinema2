@@ -1,54 +1,123 @@
-import {
-  currentLanguage,
-  toggleLanguage,
-  fetchData,
-} from './helpers/languageManager';
+import { currentLanguage, fetchData } from './helpers/languageManager.js';
+import { createLanguageToggleBtn } from './components/languageToggleBtn.js';
 
 import '../styles/about.scss';
 import '../styles/main.scss';
-const loadAboutUsPage = () => {
-  const aboutUsContainer = document.querySelector('#about-us-container');
-  const languageTogglerBtn = document.createElement('button');
-  console.log(aboutUsContainer);
 
-  const loadAboutUsItems = async (language) => {
-    const data = await fetchData('/database/aboutUs.json');
-    console.log(data);
+const aboutUsArticle = document.querySelector('.about-us');
+const aboutUsContainer = document.querySelector('#about-us-container');
 
-    if (!data || !data.aboutUs || !data.aboutUs[language]) {
-      console.error('Invalid data or language not found');
-      return;
-    }
+const loadAboutUsItems = async (language) => {
+  aboutUsContainer.innerHTML = '';
 
-    const aboutUsItems = {
-      introduction: data.aboutUs[language].introduction,
-      origin: data.aboutUs[language].origin,
-      vision: data.aboutUs[language].vision,
-    };
+  const data = await fetchData('/database/aboutUs.json');
 
-    Object.entries(aboutUsItems).forEach(([key, value]) => {
-      const section = document.createElement('section');
-      section.className = `about-us__section about-us__section__${key}`;
+  if (!data || !data.aboutUs || !data.aboutUs[language]) {
+    console.error('Invalid data or language not found');
+    return;
+  }
 
-      const title = document.createElement('h2');
-      title.className = `about-us__section__${key}--title`;
-      title.textContent = key.charAt(0).toUpperCase() + key.slice(1);
-
-      const paragraph = document.createElement('p');
-      paragraph.className = `about-us__section__${key}--text`;
-      paragraph.textContent = value;
-
-      section.appendChild(title);
-      section.appendChild(paragraph);
-
-      aboutUsContainer.appendChild(section);
-    });
+  const aboutUsItems = {
+    introduction: data.aboutUs[language].introduction,
+    origin: data.aboutUs[language].origin,
+    vision: data.aboutUs[language].vision,
   };
 
-  loadAboutUsItems('sv');
+  Object.entries(aboutUsItems).forEach(([key, value]) => {
+    const section = document.createElement('section');
+    section.className = `about-us__section about-us__section__${key}`;
+
+    const title = document.createElement('h2');
+    title.className = `about-us__section__${key}--title`;
+    title.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+
+    const paragraph = document.createElement('p');
+    paragraph.className = `about-us__section__${key}--text`;
+    paragraph.textContent = value;
+
+    section.appendChild(title);
+    section.appendChild(paragraph);
+
+    aboutUsContainer.appendChild(section);
+  });
+};
+
+const loadAboutUsPage = () =>
+{
+  
+
+  const languageTogglerBtn = createLanguageToggleBtn(
+    currentLanguage,
+    (newLanguage) => {
+      loadAboutUsItems(newLanguage); 
+    },
+  );
+
+  aboutUsArticle.appendChild( languageTogglerBtn ); 
+  console.log(languageTogglerBtn)
+  loadAboutUsItems(currentLanguage); 
 };
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM fully loaded and parsed');
   loadAboutUsPage();
 });
+
+// import {
+//   currentLanguage,
+//   toggleLanguage,
+//   fetchData,
+// } from './helpers/languageManager';
+// import { createLanguageToggleBtn } from './helpers/languageToggle';
+
+// import '../styles/about.scss';
+// import '../styles/main.scss';
+
+// const loadAboutUsPage = () => {
+//   const aboutUsContainer = document.querySelector( '#about-us-container' );
+//   aboutUsContainer.innerHTML = '';
+
+//   const languageTogglerBtn = createLanguageToggleBtn(currentLanguage);
+//   console.log(aboutUsContainer);
+
+//   const loadAboutUsItems = async (language) => {
+//     const data = await fetchData('/database/aboutUs.json');
+//     console.log(data);
+
+//     if (!data || !data.aboutUs || !data.aboutUs[language]) {
+//       console.error('Invalid data or language not found');
+//       return;
+//     }
+
+//     const aboutUsItems = {
+//       introduction: data.aboutUs[language].introduction,
+//       origin: data.aboutUs[language].origin,
+//       vision: data.aboutUs[language].vision,
+//     };
+
+//     Object.entries(aboutUsItems).forEach(([key, value]) => {
+//       const section = document.createElement('section');
+//       section.className = `about-us__section about-us__section__${key}`;
+
+//       const title = document.createElement('h2');
+//       title.className = `about-us__section__${key}--title`;
+//       title.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+
+//       const paragraph = document.createElement('p');
+//       paragraph.className = `about-us__section__${key}--text`;
+//       paragraph.textContent = value;
+
+//       section.appendChild(title);
+//       section.appendChild(paragraph);
+
+//       aboutUsContainer.appendChild(section);
+//     });
+//   };
+
+//   loadAboutUsItems('sv');
+// };
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   console.log( 'DOM fully loaded and parsed' );
+//   loadAboutUsPage();
+// });
