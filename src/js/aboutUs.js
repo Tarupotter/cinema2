@@ -39,8 +39,20 @@ const loadAboutUsItems = async (language) => {
     paragraph.className = `about-us__section__${key}--text`;
     paragraph.textContent = value.content;
 
+    const imgContainer = document.createElement( 'div' );
+    imgContainer.className = `about-us__section__${key}__image-container about-us__imgContainer`;
+
+    const image = document.createElement('img');
+    image.className = `about-us__section__${key}__image-container--image about-us__imgContainer__image`;
+    image.src = value.src;
+    image.alt = value.alt;
+
+    imgContainer.appendChild(image)
+
+
     section.appendChild(title);
     section.appendChild(paragraph);
+    section.appendChild(imgContainer);
 
     sectionContainer.appendChild(section);
     aboutUsContainer.appendChild(sectionContainer);
