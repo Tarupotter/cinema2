@@ -23,22 +23,27 @@ const loadAboutUsItems = async (language) => {
     vision: data.aboutUs[language].vision,
   };
 
-  Object.entries(aboutUsItems).forEach(([key, value]) => {
+  Object.entries( aboutUsItems ).forEach( ( [ key, value ] ) =>
+  {
+    const sectionContainer = document.createElement( 'div' );
+    sectionContainer.className = `about-us__container about-us__container--${ key }`;
+    
     const section = document.createElement('section');
     section.className = `about-us__section about-us__section__${key}`;
 
     const title = document.createElement('h2');
     title.className = `about-us__section__${key}--title`;
-    title.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+    title.textContent = value.title.charAt(0).toUpperCase() + value.title.slice(1);
 
     const paragraph = document.createElement('p');
     paragraph.className = `about-us__section__${key}--text`;
-    paragraph.textContent = value;
+    paragraph.textContent = value.content;
 
     section.appendChild(title);
     section.appendChild(paragraph);
 
-    aboutUsContainer.appendChild(section);
+    sectionContainer.appendChild(section);
+    aboutUsContainer.appendChild(sectionContainer);
   });
 };
 
