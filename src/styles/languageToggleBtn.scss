@@ -9,7 +9,8 @@
     font-size: 1.5rem;
     color:$color-text ;
     background-color: $color-cyan;
-    border: double 5px;
+    border: solid 5px $color-cyan;
+    border-radius: 10px;
     &:hover{
         background-color: $color-red;
     }
