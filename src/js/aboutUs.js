@@ -1,8 +1,12 @@
-import { currentLanguage, fetchData } from './helpers/languageManager.js';
-import { createLanguageToggleBtn } from './components/languageToggleBtn.js';
+import {  fetchData } from './helpers/fetchDataHelper.js';
+import {
+  currentLanguage,
+  createLanguageToggleBtn,
+} from './components/languageToggleBtn.js';
 
 import '../styles/about.scss';
-import '../styles/main.scss';
+import '../styles/languageToggleBtn.scss'
+
 
 const aboutUsArticle = document.querySelector('.about-us');
 const aboutUsContainer = document.querySelector('#about-us-container');
@@ -36,11 +40,11 @@ const loadAboutUsItems = async (language) => {
     title.textContent = value.title.charAt(0).toUpperCase() + value.title.slice(1);
 
     const paragraph = document.createElement('p');
-    paragraph.className = `about-us__section__${key}--text`;
+    paragraph.classList = `about-us__section__${key}--text`;
     paragraph.textContent = value.content;
 
     const imgContainer = document.createElement( 'div' );
-    imgContainer.className = `about-us__section__${key}__image-container about-us__imgContainer`;
+    imgContainer.classList = `about-us__section__${key}__image-container about-us__imgContainer`;
 
     const image = document.createElement('img');
     image.className = `about-us__section__${key}__image-container--image about-us__imgContainer__image`;
