@@ -13,6 +13,7 @@ export const fetchMovieData = async () => {
         console.log(moviesArray);
     } catch (error) {
         console.error('Error fetching data:', error);
+        return null;
     }
 };
 
