@@ -26,7 +26,10 @@ Detta går att kringå genom att fylla height i header och footer med mått i sc
 **[2024-12-27]** - Standup
 * Elena - 
 * Nils -
-* Tobias - 
+* Tobias - Har gjort färdigt min första PBI och grunden för kommande arbete. Har gjort min PR och beskrivit vad jag gjort. 
+Jag kommer härnäst att skapa en ny branch för att fortsätta med att finjustera formuläret så att detta fungerar. 
+Svårigheter är att påbörja styling på header och footer då den ej är färdig. Har gjort placeholders för tillfället och planerar att fortsätta med detta arbete i PBI kortet som avser styling.
+
 * Magnus -
 * Jörgen - 
 * Taru -

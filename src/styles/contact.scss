@@ -27,7 +27,7 @@ body{
           max-width: 600px;
           margin: 0 auto;
         }
-      }
+      
       
       .contact-form__button {
         @include font-poppins();
@@ -41,6 +41,5 @@ body{
           background-color: $color-red;
         }
       }
-
-
+    }
 }
