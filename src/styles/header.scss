@@ -1,0 +1,36 @@
+@import "utils.scss";
+
+.header__container {
+    height: 10rem;
+    @media (min-width: $breakpoint-large){
+        height: 25rem;
+    }
+}
+
+.stripe__container {
+
+  @media (min-width: $breakpoint-large) {
+position: relative;
+top: 10rem;
+    
+    .stripe__beige {
+      height: 2rem;
+      background-color: $color-text;
+    }
+
+    .stripe__orange {
+      height: 2rem;
+      background-color: $color-orange;
+    }
+
+    .stripe__red {
+      height: 2rem;
+      background-color: $color-red;
+    }
+
+    .stripe__cyan {
+      height: 2rem;
+      background-color: $color-cyan;
+    }
+  }
+}
