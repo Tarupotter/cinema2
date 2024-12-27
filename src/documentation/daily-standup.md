@@ -13,7 +13,8 @@
 * Nils -
 * Tobias - 
 * Magnus -
-* Jörgen - 
+* Jörgen - movies.json är klar med 16 filmer. Det finns med två filmer från varje årtionde.
+            Coverbilder och slidebilder är klara och ligger i var sin mapp i mappen images. 
 * Taru -
 * Bekhal -  
 
