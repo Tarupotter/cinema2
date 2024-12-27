@@ -1,3 +1,5 @@
+import '../styles/header.scss';
+
 function createHeader() {
   const headerContainer = document.querySelector(".header__container");
   const stripeContainer = document.createElement("div");
