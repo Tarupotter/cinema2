@@ -1,0 +1,11 @@
+{ 
+    "pageTitle": "Kontakta oss",
+    "form": {
+        "name": "Namn",
+        "email": "Mejl",
+        "phoneNumber": "Telefon",
+        "topic": "Ämne",
+        "message": "Meddelande",
+        "submitButton": "Skicka"
+    }
+}
