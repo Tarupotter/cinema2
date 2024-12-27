@@ -36,8 +36,11 @@ const loadAboutUsItems = async (language) => {
       sectionContainer.className = `about-us__container about-us__container--${ key }`;
       
       const section = document.createElement('section');
-      section.className = `about-us__section about-us__section__${key}`;
-      
+      section.className = `about-us__section about-us__section__${key} `;
+    
+    const textContainer= document.createElement('div')
+    textContainer.className = `about-us__section__text-container about-us__section__text-container--${key}`;
+
       const title = document.createElement('h2');
       title.className = `about-us__section__${key}--title`;
       title.textContent = value.title.charAt(0).toUpperCase() + value.title.slice(1);
@@ -54,14 +57,16 @@ const loadAboutUsItems = async (language) => {
       image.src = value.src;
       image.alt = value.alt;
       
-      imgContainer.appendChild(image)
+    imgContainer.appendChild(image)
       
       
-      section.appendChild(title);
-      section.appendChild(paragraph);
-      section.appendChild(imgContainer);
+    textContainer.appendChild(title);
+    textContainer.appendChild(paragraph);
+    
+    section.appendChild( textContainer );
+    section.appendChild(imgContainer);
       
-      sectionContainer.appendChild(section);
+    sectionContainer.appendChild(section);
     aboutUsContainer.appendChild( sectionContainer );
     
       const tags = document.querySelectorAll('h2, p, img');
