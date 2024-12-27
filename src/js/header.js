@@ -24,7 +24,7 @@ function createHeader() {
   headerImage.classList.add("header__image");
   headerImage.src = "images/popcorn.png";
   headerImage.alt = "popcorn bio";
-  headerImage.width = "400"
+  headerImage.width = "400";
   stripeContainer.appendChild(headerImage);
 
   const headerLogoContainer = document.createElement("div");
@@ -41,11 +41,10 @@ function createHeader() {
 
   headerContainer.appendChild(headerLogoContainer);
 
-const cityName = document.createElement("h1");
-cityName.classList.add("city__name");
-cityName.innerText = "VÄSTERÅS";
-headerContainer.appendChild(cityName);
-
+  const cityName = document.createElement("h1");
+  cityName.classList.add("city__name");
+  cityName.innerText = "VÄSTERÅS";
+  headerContainer.appendChild(cityName);
 }
 
 createHeader();
