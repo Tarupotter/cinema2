@@ -5,8 +5,8 @@ export const toggleLanguage = (button) => {
   button.textContent = currentLanguage === 'sv' ? 'In English' : 'Till Svenska';
 };
 
-export const createLanguageToggleBtn = (initialLanguage, onToggle) => {
-  const buttonContainer = document.createElement( 'div' )
+export const createLanguageToggleBtn = ( initialLanguage, onToggle ) =>
+{
   
   const button = document.createElement( 'button' );
   button.id = 'language-toggle-btn';
