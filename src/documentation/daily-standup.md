@@ -19,8 +19,8 @@ Detta går att kringå genom att fylla height i header och footer med mått i sc
 
 
 * Magnus -
-* Jörgen - movies.json är klar med 16 filmer. Det finns med två filmer från varje årtionde.
-            Coverbilder och slidebilder är klara och ligger i var sin mapp i mappen images. 
+* Jörgen - movies.json är i done med 16 filmer. Det finns med två filmer från varje årtionde.
+            Coverbilder och slidebilder ligger också i done och ligger i var sin mapp i mappen images. 
 * Taru -
 * Bekhal -  
 
@@ -32,7 +32,7 @@ Jag kommer härnäst att skapa en ny branch för att fortsätta med att finjuste
 Svårigheter är att påbörja styling på header och footer då den ej är färdig. Har gjort placeholders för tillfället och planerar att fortsätta med detta arbete i PBI kortet som avser styling.
 
 * Magnus -
-* Jörgen - 
+* Jörgen - movies.js i done hämtar data från movies.json och exporterar vidare till main.js som exporterar arrayen vidare till andra delar av webbplatsen.
 * Taru -
 * Bekhal -  
 

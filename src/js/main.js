@@ -1,8 +1,7 @@
-/**
- *
- * @author Jörgen Lindström
- */
-//console.log('main.js loaded');
+
+import '../styles/main.scss';
+import './aboutUs.js'
+
 
 import { fetchMovieData, moviesArray } from './movies.js';
 
