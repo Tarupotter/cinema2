@@ -13,12 +13,12 @@
     display: flex;
     flex-wrap: wrap;
 
-    height: 45rem;
+    height: auto;
     overflow: hidden;
 
     &__card {
         width: calc(50% - 2rem);
-        height: 18rem;
+        height: auto;
         padding: 1rem;
         flex: 0 0 calc(50% - 2rem);
         margin-bottom: 2rem;
