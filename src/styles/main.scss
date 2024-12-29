@@ -40,8 +40,27 @@ body {
     width: 8rem;
 
     &:active {
-      background-color: $color-background;
-      color: $color-text;
+      background-color: $color-red;
+    }
+  }
+
+  @media only screen and (min-width: 770px) {
+    &__img-container {
+      display: flex;
+    }
+
+    img {
+      width: 500px;
+    }
+
+    p {
+      margin-left: 1rem;
+    }
+
+    button {
+      &:hover {
+        background-color: $color-red;
+      }
     }
   }
 }
