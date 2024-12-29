@@ -6,84 +6,84 @@
           "en": "Popcorn",
           "sv": "Popcorn"
         },
-        "price": "50 SEK"
+        "price": 50
       },
       {
         "name": {
           "en": "Nachos with Cheese",
           "sv": "Nachos med Ost"
         },
-        "price": "60 SEK"
+        "price": 60
       },
       {
         "name": {
           "en": "Candy Mix",
           "sv": "Godisblandning"
         },
-        "price": "45 SEK"
+        "price": 45
       },
       {
         "name": {
           "en": "Chocolate Bar",
           "sv": "Chokladkaka"
         },
-        "price": "30 SEK"
+        "price": 30
       },
       {
         "name": {
           "en": "Salted Peanuts",
           "sv": "Saltade Jordnötter"
         },
-        "price": "40 SEK"
+        "price": 40
       },
       {
         "name": {
           "en": "Pretzels",
           "sv": "Saltkringlor"
         },
-        "price": "35 SEK"
+        "price": 35
       },
       {
         "name": {
           "en": "Ice Cream",
           "sv": "Glass"
         },
-        "price": "50 SEK"
+        "price": 50
       },
       {
         "name": {
           "en": "Potato Chips",
           "sv": "Potatischips"
         },
-        "price": "40 SEK"
+        "price": 40
       },
       {
         "name": {
           "en": "Crackers",
           "sv": "Kex"
         },
-        "price": "30 SEK"
+        "price": 30
       },
       {
         "name": {
           "en": "Popcorn with Caramel",
           "sv": "Popcorn med Karamell"
         },
-        "price": "55 SEK"
+        "price": 55
       },
       {
         "name": {
           "en": "Licorice",
           "sv": "Lakrits"
         },
-        "price": "45 SEK"
+        "price": 45
       },
       {
         "name": {
           "en": "Gummy Bears",
           "sv": "Gelébjörnar"
         },
-        "price": "40 SEK"
+        "price": 40
       },
       {
         "name": {
