@@ -39,7 +39,10 @@ Svårigheter är att påbörja styling på header och footer då den ej är fär
 **[2024-12-30]** - Standup
 * Elena - 
 * Nils -
-* Tobias - 
+* Tobias - Har fixat validering för input fälten med json, js och html samt scss.
+Kommande arbete kommer jag att göra navigering till contact.html sida och kanske fixa styling kortet.
+Det finns inte riktigt några hinder i nuläget. 
+
 * Magnus -
 * Jörgen - 
 * Taru -
