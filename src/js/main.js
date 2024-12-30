@@ -1,6 +1,7 @@
 
 import '../styles/main.scss';
-import './aboutUs.js'
+import './aboutUs.js';
+import './components/footer.js';
 
 
 import { fetchMovieData, moviesArray } from './movies.js';

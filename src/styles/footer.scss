@@ -2,21 +2,37 @@
 
 footer {
   max-width: 1280px;
-  margin: 0 15px;
+  margin: 0 auto;
   padding-bottom: 3rem;
+
 }
 
-h3 {
+.footer__link__title {
   @include font-poppins-semibold;
   font-size: 1.1rem;
   margin: 0.3rem 0;
 }
 
 .footer {
-  &__link {
+
+  &__screen, &__seats {
+    margin: 0 auto;  
+  }
+
+  &__link__item {
     color: $color-text;
     @include font-poppins;
     font-size: 0.8rem;
+  }
+
+  &__link__item a {
+    color: $color-text;
+    @include font-poppins;
+    font-size: 0.8rem;
+  }
+
+  &__link__item a:hover {
+    color: $color-red;
   }
 
   &__seats img,
@@ -27,45 +43,16 @@ h3 {
 
   &__links {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     margin: 0 auto;
     max-width: 992px;
 
-    @include breakpoint(small) {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-    @include breakpoint(medium) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    &--help {
-      display: none;
-
-      @include breakpoint(small) {
-        display: block;
-      }
-
-      @include breakpoint(medium) {
-        display: block;
-      }
-    }
-
-    &--companies {
-      display: none;
-
-      @include breakpoint(medium) {
-        display: block;
-      }
-    }
-
-    &--contact,
-    &--social,
-    &--help,
-    &--companies {
+    &__list {
       //padding: 0;
       margin: 0.6rem 0;
     }
   }
+
+ 
 }
