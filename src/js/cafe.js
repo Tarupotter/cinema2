@@ -1,4 +1,5 @@
-import {fetchData } from './helpers/fetchDataHelper.js';
+import { fetchData } from './helpers/fetchDataHelper.js';
+import { setupScrollAnimation } from './helpers/animations/scrollAnimation.js';
 import {
   currentLanguage,
   createLanguageToggleBtn,
@@ -6,6 +7,7 @@ import {
 
 
 import '../styles/cafe.scss';
+import '../styles/languageToggleBtn.scss';
 
 const menuContainer = document.querySelector( '#cafe-menu-container');;
 
@@ -62,13 +64,14 @@ const loadMenuItems = async ( menu, language ) =>
 
         menuItem.appendChild(menuItemPrice);
         beveragesList.appendChild(menuItem);
-      } );
+    } );
     
-      snacksSection.appendChild(snacksList);
+    snacksSection.appendChild(snacksList);
     beveragesSection.appendChild(beveragesList);
     
-      menuContainer.appendChild(snacksSection);
-      menuContainer.appendChild(beveragesSection);
+    menuContainer.appendChild(snacksSection);
+    menuContainer.appendChild(beveragesSection);
+    setupScrollAnimation( 'li' );
 };
     const loadCafeMenu = async (language) => {
     const data = await fetchData('/database/cafeMenu.json');
@@ -76,8 +79,8 @@ const loadMenuItems = async ( menu, language ) =>
     
   if (data && data.menu) {
     loadMenuItems(data.menu, language);
-  } else {
-      console.error( 'Failed to load cafe menu data.' );
+} else {
+    console.error( 'Failed to load cafe menu data.' );
       return [];
   }
 };
@@ -86,7 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
   cafeMenuContainer.id = 'cafe-menu-container';
   document.body.appendChild(cafeMenuContainer);
 
-  loadCafeMenu(currentLanguage);
+    loadCafeMenu( currentLanguage );
+    
 
   const languageToggleBtn = createLanguageToggleBtn(
     currentLanguage,

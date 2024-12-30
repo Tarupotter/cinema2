@@ -1,0 +1,40 @@
+@use './utils.scss' as *;
+
+body{
+background-color: $color-background;
+color: $color-text;
+margin:0;
+
+.menu-section{
+    // padding: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    justify-items: center;
+    // border: 4px solid transparent;
+    // border-image: url(../../images/about-us-img/indoors-decor.jpg) 20% stretch;
+    
+}
+.menu-section__title{
+    font-size: 2.5rem;
+}
+
+ul{
+    list-style: none ;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+}
+.cafe-menu__item{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 4px solid transparent;
+ border-image: url(../../images/about-us-img/indoors-decor.jpg) 20% stretch;
+}
+span{
+    margin-right: 1rem;
+}   
