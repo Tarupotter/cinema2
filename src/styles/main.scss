@@ -19,20 +19,20 @@ body {
 
   max-width: 1366px;
 
-  h2 {
+  &__header {
     @include font-poppins-semibold;
     font-size: 3rem;
     text-align: center;
   }
 
-  img {
+  &__gift-image {
     display: block;
     margin: 0 auto;
     max-width: 500px;
     width: 100%;
   }
 
-  button {
+  &__gift-button {
     @include font-poppins-semibold;
     background-color: transparent;
     border: 2px solid #000;
@@ -56,15 +56,15 @@ body {
       display: flex;
     }
 
-    h2 {
+    &__header {
       font-size: 4rem;
     }
 
-    img {
+    &__gift-image {
       margin-left: auto;
     }
 
-    p {
+    &__gift-text {
       font-size: 2rem;
 
       margin-left: 1rem;
@@ -72,7 +72,7 @@ body {
       width: 500px;
     }
 
-    button {
+    &__gift-button {
       font-size: 2rem;
 
       width: 20rem;
