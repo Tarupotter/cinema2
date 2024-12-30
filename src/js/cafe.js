@@ -1,5 +1,5 @@
 import { fetchData } from './helpers/fetchDataHelper.js';
-import { setupScrollAnimation } from './helpers/animations/scrollAnimation.js';
+import { setupScrollAnimation } from './helpers/animations/listScrollAnimation.js';
 import {
   currentLanguage,
   createLanguageToggleBtn,
