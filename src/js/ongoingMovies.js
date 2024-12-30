@@ -1,6 +1,9 @@
 import '../styles/ongoingMovies.scss';
+import { initializeMovieData, moviesArray } from './main.js';
 
 const ongoingMoviesDom = document.querySelector(".ongoingMovies"); 
+
+let genres = [] 
 
 let testArray = [
     {
@@ -21,13 +24,28 @@ let testArray = [
     },
 ]
 
+const useData = async () => {
+    await initializeMovieData(); // Wait for the data to load
+};
 
-for (let currentIndex = 0; currentIndex < testArray.length; currentIndex++) {
-    const element = testArray[currentIndex];
-    createMovieCard({
-        src: element.src,
-        movieLabel: element.movieLabel
-    })
+useData();
+
+setTimeout(() => {
+    InitializeOngoingMovies();
+}, 100);
+
+function InitializeOngoingMovies() {
+    createGenres();
+
+    createFilterProps();
+
+    for (let currentIndex = 0; currentIndex < testArray.length; currentIndex++) {
+        const element = testArray[currentIndex];
+        createMovieCard({
+            src: element.src,
+            movieLabel: element.movieLabel
+        })
+    };
 }
 
 function createMovieCard(props) {
@@ -44,4 +62,51 @@ function createMovieCard(props) {
     cardLabel.innerHTML = props.movieLabel; 
     cardLabel.classList.add("ongoingMovies__card__label");
     cardDiv.appendChild(cardLabel);
+}
+
+function createGenres() {
+    for (let currentMovieIndex = 0; currentMovieIndex < moviesArray["movies"].length; currentMovieIndex++) {
+        let foundGenre = false; 
+        const currentMovie = moviesArray["movies"][currentMovieIndex];
+        
+        for (let genreIndex = 0; genreIndex < genres.length; genreIndex++) {
+            const currentGenre = genres[genreIndex];
+            
+            if (currentGenre == currentMovie.genre) {
+                foundGenre = true 
+            }
+        }
+
+        if (!foundGenre) {
+            genres.push(currentMovie.genre)
+        } 
+    }
+}
+
+
+function createFilterProps() {
+    let filterDiv = document.createElement("div");
+    filterDiv.classList.add("ongoingMovies__filterDiv");
+    ongoingMoviesDom.appendChild(filterDiv);
+
+    // Mobile only 
+    let filterDropdown = document.createElement("select");
+    filterDropdown.classList.add("ongoingMovies__filterDiv__select");
+    filterDiv.appendChild(filterDropdown);
+
+    let startingOption = new Option("Välj genre (Ingen vald)");
+    startingOption.selected = true;
+    startingOption.classList.add("ongoingMovies__filterDiv__select__option");
+    filterDropdown.add(startingOption);
+
+    for (let genreIndex = 0; genreIndex < genres.length; genreIndex++) {
+        const currentGenre = genres[genreIndex];
+        
+        let newOption = new Option(currentGenre, "genre_" + currentGenre);
+
+        newOption.classList.add("ongoingMovies__filterDiv__select__option");
+        filterDropdown.add(newOption);
+    }
+
+    // Desktop
 }
