@@ -32,7 +32,8 @@
         &__label {
             display: flex;
             justify-content: center;
-
+            margin: 0;
+            font-size: 1.3rem;
             @include font-poppins;
             color: $color-text;
         }
