@@ -1,0 +1,26 @@
+{
+    "NavItems": {
+        "en":[
+            
+               { "name":"Start", "href":"index.html"},
+               { "name":"Movies", "href":"#2"},
+               { "name":"Dining", "href":"#3"},
+               { "name":"About us", "href":"about.html"},
+               { "name":"Contact", "href":"contact.html"},
+               { "name":"Open hours", "href":"#6"}
+               
+             
+    
+            
+        ],
+        "sv":[
+            {"name":"Start","href":"index.html" },
+            {"name":"Filmer","href":"#2" },
+            {"name":"Servering","href":"#3" },
+            {"name":"Om oss","href":"about.html" },
+            {"name":"Kontakt","href":"contact.html" },
+            {"name":"Öppettider","href":"#6" }
+            
+        ]
+    }
+    }
