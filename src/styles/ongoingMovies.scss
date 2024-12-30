@@ -40,6 +40,10 @@
     }
 
     &__filterDiv {
+        @include breakpoint(large) {
+            display: none;
+        }
+
         width: 100%;
         display: flex;
         justify-content: center;
