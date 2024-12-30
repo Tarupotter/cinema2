@@ -32,7 +32,7 @@ useData();
 
 setTimeout(() => {
     InitializeOngoingMovies();
-}, 100);
+}, 500);
 
 function InitializeOngoingMovies() {
     createGenres();
