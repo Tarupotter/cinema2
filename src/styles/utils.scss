@@ -7,11 +7,23 @@ $color-text: #f1ddc5;
 $color-background: #1a323c;
 
 // Breakpoints
-$breakpoint-large: 992px;
+$breakpoint-small: 640px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+$breakpoint-xlarge: 1280px;
 
+// Mixin för breakpoints
 @mixin breakpoint($point) {
-    @if $point == large {
+    @if $point == small {
+        @media (min-width: $breakpoint-small) { @content; }
+    } @else if $point == medium {
+        @media (min-width: $breakpoint-medium) { @content; }
+    } @else if $point == large {
         @media (min-width: $breakpoint-large) { @content; }
+    } @else if $point == xlarge {
+        @media (min-width: $breakpoint-xlarge) { @content; }
+    } @else {
+        @error "Breakpoint #{$point} är inte definierat!";
     }
 }
 

@@ -1,0 +1,71 @@
+@use "./utils.scss" as *;
+
+footer {
+  max-width: 1280px;
+  margin: 0 15px;
+  padding-bottom: 3rem;
+}
+
+h3 {
+  @include font-poppins-semibold;
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+.footer {
+  &__link {
+    color: $color-text;
+    @include font-poppins;
+    font-size: 0.8rem;
+  }
+
+  &__seats img,
+  &__screen img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 992px;
+
+    @include breakpoint(small) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &--help {
+      display: none;
+
+      @include breakpoint(small) {
+        display: block;
+      }
+
+      @include breakpoint(medium) {
+        display: block;
+      }
+    }
+
+    &--companies {
+      display: none;
+
+      @include breakpoint(medium) {
+        display: block;
+      }
+    }
+
+    &--contact,
+    &--social,
+    &--help,
+    &--companies {
+      //padding: 0;
+      margin: 0.6rem 0;
+    }
+  }
+}

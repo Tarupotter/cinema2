@@ -1,7 +1,9 @@
 @use './utils.scss' as *;
+@use 'footer.scss';
 
 body{
 background-color: $color-background;
+font-size: 16px;
 
 li{
     list-style: none;
