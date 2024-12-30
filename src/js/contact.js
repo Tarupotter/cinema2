@@ -4,7 +4,7 @@ import "../styles/contact.scss";
 // Fetch file from public/contact.json because fetch dont work when file lies in src folder
 // Footer fetch
 
-fetch("/contact.json")
+fetch("./database/contact.json")
   .then((response) => {
     if (!response.ok) {
       throw new Error("Network response was not ok");
