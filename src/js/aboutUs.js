@@ -4,7 +4,7 @@ import {
   createLanguageToggleBtn,
 } from './components/languageToggleBtn.js';
 
-import { observer } from './helpers/fadeIn.js';
+import { observer } from './helpers/animations/fadeIn.js';
 
 import '../styles/about.scss';
 import '../styles/languageToggleBtn.scss'
