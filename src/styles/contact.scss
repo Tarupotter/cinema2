@@ -1,45 +1,65 @@
-@use './utils.scss' as *;
+@use "./utils.scss" as *;
 
+body {
+  background-color: $color-background;
+  color: $color-text;
 
-body{ 
+  .header {
+    @include font-yester();
+    color: $color-text;
+  }
+
+  .contact-page__title {
+    @include font-poppins-semibold();
+    color: $color-red;
+    text-align: center;
+    margin-bottom: 90px;
+  }
+
+  .contact-form {
+    display: block;
     background-color: $color-background;
     color: $color-text;
+    padding: 30px;
+    box-shadow: 0 6px 10px $color-orange;
+    border-radius: 12px;
 
-    .header {
-        @include font-yester();
-        color: $color-text;
-      }
+    .contact-form__label--name,
+    .contact-form__label--email,
+    .contact-form__label--phoneNumber,
+    .contact-form__label--topic,
+    .contact-form__label--message {
+      display: block;
+      @include font-poppins-semibold();
+      margin-bottom: 8px;
+    }
 
-    .contact-page__title {
-        @include font-poppins-semibold();
-        color: $color-red;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      
-      .contact-form {
-        background-color: $color-background;
-        color: $color-text;
-        padding: 20px;
-        border-radius: 10px;
-      
-        @include breakpoint(large) {
-          max-width: 600px;
-          margin: 0 auto;
-        }
-      
-      
-      .contact-form__button {
-        @include font-poppins();
-        background-color: $color-orange;
-        color: $color-text;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-      
-        &:hover {
-          background-color: $color-red;
-        }
+    .contact-form__input,
+    .contact-form__textarea {
+      display: block;
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 20px;
+    }
+
+    @include breakpoint(large) {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form__button {
+      @include font-poppins();
+      display: block;
+      margin-top: 10px;
+      background-color: $color-orange;
+      color: $color-text;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-red;
       }
     }
+  }
 }
