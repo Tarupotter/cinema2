@@ -1,0 +1,41 @@
+@use './utils.scss' as *;
+
+
+.ongoingMoviesSection {
+    &__header {
+        text-align: center;
+        @include font-poppins-semibold;
+        color: $color-text; 
+    }
+}
+
+.ongoingMovies {
+    display: flex;
+    flex-wrap: wrap;
+
+    height: auto;
+    overflow: hidden;
+
+    &__card {
+        width: calc(50% - 2rem);
+        height: auto;
+        padding: 1rem;
+        flex: 0 0 calc(50% - 2rem);
+        margin-bottom: 2rem;
+
+        &__image {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        &__label {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            font-size: 1.3rem;
+            @include font-poppins;
+            color: $color-text;
+        }
+    }
+}

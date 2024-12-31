@@ -1,6 +1,7 @@
 
 import '../styles/main.scss';
-import './aboutUs.js'
+import './aboutUs.js';
+import './ongoingMovies.js';
 
 
 import { fetchMovieData, moviesArray } from './movies.js';
