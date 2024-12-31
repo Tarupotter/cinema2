@@ -3,6 +3,14 @@ import { initializeMovieData, moviesArray } from './main.js';
 
 const ongoingMoviesDom = document.querySelector(".ongoingMovies"); 
 
+const useData = async () => {
+    await initializeMovieData();
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    useData().then((data) => InitializeOngoingMovies());
+});
+
 let genres = [] 
 
 let testArray = [
@@ -24,21 +32,11 @@ let testArray = [
     },
 ]
 
-const useData = async () => {
-    await initializeMovieData(); // Wait for the data to load
-};
-
-useData();
-
-setTimeout(() => {
-    InitializeOngoingMovies();
-}, 500);
-
 function InitializeOngoingMovies() {
     createGenres();
-
+    
     createFilterProps();
-
+    
     for (let currentIndex = 0; currentIndex < testArray.length; currentIndex++) {
         const element = testArray[currentIndex];
         createMovieCard({
@@ -49,16 +47,16 @@ function InitializeOngoingMovies() {
 }
 
 function createMovieCard(props) {
-    let cardDiv = document.createElement("div");
+    const cardDiv = document.createElement("div");
     cardDiv.classList.add("ongoingMovies__card");
     ongoingMoviesDom.appendChild(cardDiv);
 
-    let cardImage = document.createElement("img");
+    const cardImage = document.createElement("img");
     cardImage.src = props.src;
     cardImage.classList.add("ongoingMovies__card__image")
     cardDiv.appendChild(cardImage);
 
-    let cardLabel = document.createElement("h3");
+    const cardLabel = document.createElement("h3");
     cardLabel.innerHTML = props.movieLabel; 
     cardLabel.classList.add("ongoingMovies__card__label");
     cardDiv.appendChild(cardLabel);
@@ -85,16 +83,16 @@ function createGenres() {
 
 
 function createFilterProps() {
-    let filterDiv = document.createElement("div");
+    const filterDiv = document.createElement("div");
     filterDiv.classList.add("ongoingMovies__filterDiv");
     ongoingMoviesDom.appendChild(filterDiv);
 
     // Mobile only 
-    let filterDropdown = document.createElement("select");
+    const filterDropdown = document.createElement("select");
     filterDropdown.classList.add("ongoingMovies__filterDiv__select");
     filterDiv.appendChild(filterDropdown);
 
-    let startingOption = new Option("Välj genre (Ingen vald)");
+    const startingOption = new Option("Välj genre (Ingen vald)");
     startingOption.selected = true;
     startingOption.classList.add("ongoingMovies__filterDiv__select__option");
     filterDropdown.add(startingOption);
