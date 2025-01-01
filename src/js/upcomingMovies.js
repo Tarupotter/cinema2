@@ -1,4 +1,3 @@
-import "../styles/upcomingMovies.scss";
 /*
  * Originally made by Magnus Olofsson, modified by Nils Nyberg.
  */
@@ -8,19 +7,19 @@ const upcomingMoviesDom = document.querySelector(".upcomingMovies");
 const moviesArray = [
   {
     src: "https://media.istockphoto.com/id/1147544807/sv/vektor/ingen-miniatyr-bild-vektor-grafik.jpg?s=612x612&w=0&k=20&c=RWp5ECPYkIEO8J3zxyvsc4Lrf68NiLDybtPHix_QI1I=",
-    movieLabel: "Sune i fjällen",
+    movieLabel: "Terminator",
   },
   {
     src: "https://media.istockphoto.com/id/1147544807/sv/vektor/ingen-miniatyr-bild-vektor-grafik.jpg?s=612x612&w=0&k=20&c=RWp5ECPYkIEO8J3zxyvsc4Lrf68NiLDybtPHix_QI1I=",
-    movieLabel: "Sune i Norge",
+    movieLabel: "Terminator 2 - Domedagen",
   },
   {
     src: "https://media.istockphoto.com/id/1147544807/sv/vektor/ingen-miniatyr-bild-vektor-grafik.jpg?s=612x612&w=0&k=20&c=RWp5ECPYkIEO8J3zxyvsc4Lrf68NiLDybtPHix_QI1I=",
-    movieLabel: "Sune i fjällen",
+    movieLabel: "Robocop",
   },
   {
     src: "https://media.istockphoto.com/id/1147544807/sv/vektor/ingen-miniatyr-bild-vektor-grafik.jpg?s=612x612&w=0&k=20&c=RWp5ECPYkIEO8J3zxyvsc4Lrf68NiLDybtPHix_QI1I=",
-    movieLabel: "Sune i Norge",
+    movieLabel: "Terminator Salvation",
   },
 ];
 
