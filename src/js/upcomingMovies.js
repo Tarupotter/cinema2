@@ -1,3 +1,4 @@
+import "../styles/upcomingMovies.scss";
 /*
  * Originally made by Magnus Olofsson, modified by Nils Nyberg.
  */
