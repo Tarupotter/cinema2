@@ -11,6 +11,7 @@ body {
 
   .contact-page__title {
     @include font-poppins-semibold();
+
     color: $color-text;
     text-align: center;
     margin-bottom: 90px;
@@ -60,10 +61,47 @@ body {
     @include breakpoint(large) {
       max-width: 600px;
       margin: 0 auto;
+
+    color: $color-red;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    background-color: $color-background;
+    color: $color-text;
+    padding: 20px;
+    border-radius: 10px;
+
+    @include breakpoint(large) {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    //Validate
+    input.invalid,
+    textarea.invalid {
+      border: 2px solid $color-red;
+    }
+
+    //Error message
+    .error-message {
+      @include font-poppins();
+      color: $color-red;
+      font-size: 0.875rem;
+      margin-top: -10px;
+      margin-bottom: 10px;
+      display: none; // Hidden as standard
+
+      &.visible {
+        display: block; // Show when validation throws error
+      }
+
     }
 
     .contact-form__button {
       @include font-poppins();
+
       display: block;
       margin-top: 10px;
       background-color: $color-orange;
@@ -72,6 +110,13 @@ body {
       border-radius: 8px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+
+      background-color: $color-orange;
+      color: $color-text;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+
 
       &:hover {
         background-color: $color-red;
