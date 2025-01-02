@@ -1,13 +1,3 @@
-**[2024-12-20]** - Standup
-* Elena - 
-* Nils -
-* Tobias - 
-* Magnus -
-* Jörgen - 
-* Taru -
-* Bekhal -  
-
-
 **[2024-12-23]** - Standup
 * Elena - 
 * Nils -
@@ -39,7 +29,10 @@ Svårigheter är att påbörja styling på header och footer då den ej är fär
 **[2024-12-30]** - Standup
 * Elena - 
 * Nils -
-* Tobias - 
+* Tobias - Har fixat validering för input fälten med json, js och html samt scss.
+Kommande arbete kommer jag att göra navigering till contact.html sida och kanske fixa styling kortet.
+Det finns inte riktigt några hinder i nuläget. 
+
 * Magnus -
 * Jörgen - 
 * Taru -
@@ -48,7 +41,10 @@ Svårigheter är att påbörja styling på header och footer då den ej är fär
 **[2025-01-02]** - Standup
 * Elena - 
 * Nils -
-* Tobias - 
+* Tobias - Har fixat mer med validerings kortet och även gjort styling för formuläret. 
+Kommer fortsätta med dessa kort för att få klart mina 3 PBI, har en i done nu. 
+och validering och styling korten ligger i review nu. 
+Inga hinder just nu. 
 * Magnus -
 * Jörgen - 
 * Taru -
