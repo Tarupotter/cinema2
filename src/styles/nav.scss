@@ -1,0 +1,26 @@
+@use "./utils.scss" as *;
+
+
+
+nav {
+    display: flex;
+    justify-content: center;
+   position: relative;
+   top: 23rem;
+   
+
+  ul {
+    display: flex;
+    font-family: poppins;
+    text-transform: uppercase;
+
+    li {
+        margin: 0 4rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+      a {
+        color: $color-text;
+      }
+    }
+  }
+}
