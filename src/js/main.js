@@ -1,14 +1,13 @@
+import "../styles/main.scss";
+import "./aboutUs.js";
+import "./ongoingMovies.js";
+import "./upcomingMovies.js";
 
-import '../styles/main.scss';
-import './aboutUs.js';
-import './ongoingMovies.js';
-
-
-import { fetchMovieData, moviesArray } from './movies.js';
+import { fetchMovieData, moviesArray } from "./movies.js";
 
 export const initializeMovieData = async () => {
-    await fetchMovieData(); // Ensure the data is fetched before proceeding
-    console.log('Data loaded in main.js:', moviesArray);
+  await fetchMovieData(); // Ensure the data is fetched before proceeding
+  console.log("Data loaded in main.js:", moviesArray);
 };
 
 export { moviesArray }; // Re-export the array
