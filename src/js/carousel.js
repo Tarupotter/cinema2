@@ -27,13 +27,13 @@ buttons.forEach(button => {
 const populateCarousel = async () => {
   try {
     const response = await fetch('/public/database/movies.json');
-    const data = await response.json();
-    console.log('Movies data fetched:', data.movies);
+    const jsonData = await response.json();
+    console.log('Movies jsonData fetched:', jsonData.movies);
 
     const slides = document.querySelectorAll(".slides .slide");
 
-    // Add movie data to the first 3 slides
-    data.movies.slice(0, 3).forEach((movie, index) => {
+    // Add movie jsonData to the first 3 slides
+    jsonData.movies.slice(0, 3).forEach((movie, index) => {
       if (slides[index]) {
         slides[index].innerHTML = `
           <img src="${movie.sliderimage}" alt="${movie.title}" />
