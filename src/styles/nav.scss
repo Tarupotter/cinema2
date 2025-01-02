@@ -7,7 +7,6 @@ nav {
     justify-content: center;
     position: relative;
     top: 23rem;
-    
   }
   ul {
     padding: 0;
@@ -15,18 +14,15 @@ nav {
       display: flex;
       font-family: poppins;
       text-transform: uppercase;
-      
     }
 
     li {
-      
       font-size: 1.6rem;
       font-weight: bold;
       @include breakpoint(large) {
         margin-right: 5rem;
       }
-     
-      
+
       a {
         padding: 1rem;
         color: $color-text;
@@ -39,15 +35,14 @@ nav {
   display: flex;
   position: fixed;
   justify-content: center;
-    align-items: center;
-    text-align: center;
+  align-items: center;
+  text-align: center;
   top: 1rem;
   right: 1rem;
   bottom: 1rem;
   left: 1rem;
   text-transform: uppercase;
   background-color: $color-background;
-  
 
   ul {
     font-family: poppins;
@@ -56,5 +51,3 @@ nav {
     }
   }
 }
-
-
