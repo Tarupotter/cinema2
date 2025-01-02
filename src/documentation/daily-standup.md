@@ -51,7 +51,10 @@ Det finns inte riktigt några hinder i nuläget.
 **[2025-01-02]** - Standup
 * Elena - 
 * Nils -
-* Tobias - 
+* Tobias - Har fixat mer med validerings kortet och även gjort styling för formuläret. 
+Kommer fortsätta med dessa kort för att få klart mina 3 PBI, har en i done nu. 
+och validering och styling korten ligger i review nu. 
+Inga hinder just nu. 
 * Magnus -
 * Jörgen - 
 * Taru -
