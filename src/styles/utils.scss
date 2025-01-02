@@ -18,6 +18,7 @@ $breakpoint-xlarge: 1280px;
     @media (min-width: $breakpoint-small) {
       @content;
     }
+    
   } @else if $point == medium {
     @media (min-width: $breakpoint-medium) {
       @content;
