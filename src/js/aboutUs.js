@@ -3,12 +3,12 @@ import {
   currentLanguage,
   createLanguageToggleBtn,
 } from './components/languageToggleBtn.js';
-import { createFooter } from './components/footer.js';
-
+import './components/footer.js';
 import { observer } from './helpers/fadeIn.js';
 
 import '../styles/about.scss';
 import '../styles/languageToggleBtn.scss'
+// import { createFooter } from './components/footer.js';
 
 
 const aboutUsArticle = document.querySelector('.about-us');
@@ -18,7 +18,7 @@ const aboutUsContainer = document.querySelector('#about-us-container');
 const loadAboutUsItems = async (language) => {
   aboutUsContainer.innerHTML = '';
   
-  const data = await fetchData('/database/aboutUs.json');
+  const data = await fetchData('/Group-d-assignment/public/database/aboutUs.json');
   
   if (!data || !data.aboutUs || !data.aboutUs[language]) {
     console.error('Invalid data or language not found');
@@ -94,5 +94,6 @@ const loadAboutUsItems = async (language) => {
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM fully loaded and parsed');
   loadAboutUsPage();
+  // createFooter();
 });
 

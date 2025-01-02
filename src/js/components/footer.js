@@ -3,7 +3,7 @@ import "../../styles/footer.scss";
 
 export async function createFooter() {
 
-  const data = await fetchData("../../../database/footer.json");
+  const data = await fetchData("/Group-d-assignment/database/footer.json");
 
   if (!data) {
     console.error("Invalid data not found");
@@ -11,12 +11,13 @@ export async function createFooter() {
   }
   // Skapa footer-elementet
   const footer = document.createElement("footer");
+  // const footer = document.querySelector("footer");
 
   // Skapa footer__screen
   const footerScreen = document.createElement("div");
   footerScreen.className = "footer__screen";
   const screenImg = document.createElement("img");
-  screenImg.src = "images/filmduk.png";
+  screenImg.src = "/Group-d-assignment/images/filmduk.png";
   screenImg.alt = "Illustration of a screen";
   footerScreen.appendChild(screenImg);
   footer.appendChild(footerScreen);
@@ -25,7 +26,7 @@ export async function createFooter() {
   const footerSeats = document.createElement("div");
   footerSeats.className = "footer__seats";
   const seatsImg = document.createElement("img");
-  seatsImg.src = "images/stolar.png";
+  seatsImg.src = "/Group-d-assignment/images/stolar.png";
   seatsImg.alt = "Illustration of a movie theater";
   footerSeats.appendChild(seatsImg);
   footer.appendChild(footerSeats);
