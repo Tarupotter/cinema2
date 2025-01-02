@@ -9,10 +9,13 @@ nav {
   top: 23rem;
 }
   ul {
-    
-    display: flex;
+    @include breakpoint(large){
+display: flex;
     font-family: poppins;
     text-transform: uppercase;
+
+    }
+    
 
     li {
       margin: 0 4rem;

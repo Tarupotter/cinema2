@@ -1,7 +1,7 @@
 import '../styles/nav.scss';
 
 
-async function loadNavbar() {
+export async function loadNavbar() {
     try {
       const response = await fetch('/database/nav.json');  
       if (!response.ok) {
@@ -29,6 +29,24 @@ async function loadNavbar() {
   
       navBar.appendChild(ul);  
       document.querySelector('.header__container').prepend(navBar);  
+
+
+
+      const navButton = document.createElement("img");
+      navButton.classList.add("nav__button");
+      navButton.src = "/images/sliders/hamburger.png";
+      navButton.alt = "button for navbar";
+    
+      document.querySelector(".header__container").prepend(navButton);
+    
+      navButton.addEventListener("click", function () {
+        if (navBar.style.display === 'none' || navBar.style.display === '') {
+          navBar.style.display = 'block';  // Visa navbaren
+      } else {
+          navBar.style.display = 'none';   // Dölja navbaren
+      }
+
+      });
     } catch (error) {
       console.error('Error:', error); 
     }

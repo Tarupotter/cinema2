@@ -1,6 +1,6 @@
 import '../styles/main.scss';
 import './header.js'
-import './nav.js'
+
 
 import { fetchMovieData, moviesArray } from './movies.js';
 
