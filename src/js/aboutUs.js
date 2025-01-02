@@ -3,11 +3,13 @@ import {
   currentLanguage,
   createLanguageToggleBtn,
 } from './components/languageToggleBtn.js';
-
+import './components/footer.js';
+import './header.js';
 import { observer } from './helpers/fadeIn.js';
 
 import '../styles/about.scss';
 import '../styles/languageToggleBtn.scss'
+// import { createFooter } from './components/footer.js';
 
 
 const aboutUsArticle = document.querySelector('.about-us');
@@ -17,7 +19,7 @@ const aboutUsContainer = document.querySelector('#about-us-container');
 const loadAboutUsItems = async (language) => {
   aboutUsContainer.innerHTML = '';
   
-  const data = await fetchData('/database/aboutUs.json');
+  const data = await fetchData('/Group-d-assignment/database/aboutUs.json');
   
   if (!data || !data.aboutUs || !data.aboutUs[language]) {
     console.error('Invalid data or language not found');
@@ -71,7 +73,9 @@ const loadAboutUsItems = async (language) => {
     
       const tags = document.querySelectorAll('h2, p, img');
       tags.forEach((tag) => {
-        observer.observe(tag);
+        if (tag.classList != "header__image") {
+          observer.observe(tag);
+        }
       } );
     });
   };
@@ -93,5 +97,6 @@ const loadAboutUsItems = async (language) => {
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM fully loaded and parsed');
   loadAboutUsPage();
+  // createFooter();
 });
 
