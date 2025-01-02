@@ -8,11 +8,10 @@ body {
   overflow-x: hidden;
 
   .cafe-menu {
-     margin: 1rem;
+    margin: 1rem;
     border: 4px solid transparent;
     border-image: url(../../images/about-us-img/indoors-decor.jpg) 20% stretch;
-
-}
+  }
   .cafe-menu__container {
     width: 100%;
     display: flex;
@@ -36,16 +35,17 @@ body {
         flex-direction: column;
         border: solid 5px red;
         width: 100%;
-    }
-    .cafe-menu__item {
-        margin-right:1.5rem ;
+      }
+      .cafe-menu__item {
+        margin-right: 1.5rem;
         padding-bottom: 1rem;
         padding-top: 1rem;
         width: 95%;
         display: flex;
         justify-content: space-between;
         border-bottom: 4px solid transparent;
-        border-image: url(../../images/about-us-img/indoors-decor.jpg) 20% stretch;
+        border-image: url(../../images/about-us-img/indoors-decor.jpg) 20%
+          stretch;
       }
       span {
         margin-right: 0.5rem;
