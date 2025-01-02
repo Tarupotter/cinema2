@@ -8,7 +8,7 @@ let moviesArray = [];
 
 export const fetchMovieData = async () => {
     try {
-        const response = await fetch('Group-d-assignment/database/movies.json');
+        const response = await fetch('/Group-d-assignment/database/movies.json');
         moviesArray = await response.json(); // Populate the array
         console.log(moviesArray);
     } catch (error) {
