@@ -78,11 +78,16 @@ header {
   }
 
   .header__logo {
+    
     font-family: yesteryear;
-    font-size: 7rem;
+    font-size: 5rem;
     color: $color-orange;
     font-weight: lighter;
-    margin: 0;
+    margin: 1rem;
+    @include breakpoint(large) {
+      font-size: 7rem;
+      margin: 0;
+    }
   }
 
   .header__logo__text {
