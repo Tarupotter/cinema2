@@ -6,6 +6,14 @@ const ongoingMoviesDom = document.querySelector(".ongoingMovies");
 let genres = [];
 let decades = [];
 
+const useData = async () => {
+    await initializeMovieData();
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    useData().then((data) => InitializeOngoingMovies());
+});
+
 let testArray = [
     {
         src: "https://media.istockphoto.com/id/1147544807/sv/vektor/ingen-miniatyr-bild-vektor-grafik.jpg?s=612x612&w=0&k=20&c=RWp5ECPYkIEO8J3zxyvsc4Lrf68NiLDybtPHix_QI1I=",
@@ -25,22 +33,11 @@ let testArray = [
     },
 ]
 
-const useData = async () => {
-    await initializeMovieData(); // Wait for the data to load
-};
-
-useData();
-
-setTimeout(() => {
-    InitializeOngoingMovies();
-}, 500);
-
 function InitializeOngoingMovies() {
     createGenres();
     createDecades();
-
     createFilterProps();
-
+    
     for (let currentIndex = 0; currentIndex < testArray.length; currentIndex++) {
         const element = testArray[currentIndex];
         createMovieCard({
@@ -51,16 +48,16 @@ function InitializeOngoingMovies() {
 }
 
 function createMovieCard(props) {
-    let cardDiv = document.createElement("div");
+    const cardDiv = document.createElement("div");
     cardDiv.classList.add("ongoingMovies__card");
     ongoingMoviesDom.appendChild(cardDiv);
 
-    let cardImage = document.createElement("img");
+    const cardImage = document.createElement("img");
     cardImage.src = props.src;
     cardImage.classList.add("ongoingMovies__card__image")
     cardDiv.appendChild(cardImage);
 
-    let cardLabel = document.createElement("h3");
+    const cardLabel = document.createElement("h3");
     cardLabel.innerHTML = props.movieLabel; 
     cardLabel.classList.add("ongoingMovies__card__label");
     cardDiv.appendChild(cardLabel);
@@ -106,26 +103,30 @@ function createDecades() {
 
 
 function createFilterProps() {
-    let filterDiv = document.createElement("div");
+    const filterDiv = document.createElement("div");
     filterDiv.classList.add("ongoingMovies__filterDiv");
     ongoingMoviesDom.appendChild(filterDiv);
 
     // Mobile only 
-    let filterDropdown = document.createElement("select");
-    filterDropdown.classList.add("ongoingMovies__filterDiv__select");
-    filterDiv.appendChild(filterDropdown);
+    const selectDiv = document.createElement("div");
+    selectDiv.classList.add("ongoingMovies__filterDiv__selectDiv");
+    filterDiv.appendChild(selectDiv);
 
-    let startingOption = new Option("Välj genre (Ingen vald)");
+    const filterDropdown = document.createElement("select");
+    filterDropdown.classList.add("ongoingMovies__filterDiv__selectDiv__select");
+    selectDiv.appendChild(filterDropdown);
+
+    const startingOption = new Option("Välj genre (Ingen vald)");
     startingOption.selected = true;
-    startingOption.classList.add("ongoingMovies__filterDiv__select__option");
-    filterDropdown.add(startingOption);
+    startingOption.classList.add("ongoingMovies__filterDiv__selectDiv__select__option");
+    filterDropdown.add(startingOption)
 
     for (let genreIndex = 0; genreIndex < genres.length; genreIndex++) {
         const currentGenre = genres[genreIndex];
         
         let newOption = new Option(currentGenre, "genre_" + currentGenre);
 
-        newOption.classList.add("ongoingMovies__filterDiv__select__option");
+        newOption.classList.add("ongoingMovies__filterDiv__selectDiv__select__option");
         filterDropdown.add(newOption);
     }
 
