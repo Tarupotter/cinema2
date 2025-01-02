@@ -3,6 +3,7 @@ import {
   currentLanguage,
   createLanguageToggleBtn,
 } from './components/languageToggleBtn.js';
+import { createFooter } from './components/footer.js';
 
 import { observer } from './helpers/fadeIn.js';
 

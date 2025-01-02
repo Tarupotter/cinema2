@@ -1,4 +1,5 @@
 import '../styles/contact.scss';
+import { createFooter } from './components/footer';
 
 
 // Header fetch

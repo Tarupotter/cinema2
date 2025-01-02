@@ -3,7 +3,7 @@
       {
         "title": "Kontakt",
         "links": [
-          { "text": "RETRO -Filmer från förr-" },
+          { "text": "RETRO -Filmer från förr-", "url": "#" },
           { "text": "Fiskartorget 1", "url": "#" },
           { "text": "722 12 Västerås", "url": "#" },
           { "text": "Tel: 123 45 56", "url": "#" }
