@@ -1,9 +1,9 @@
 import "../styles/main.scss";
 import "./aboutUs.js";
+import './header.js'
 import "./ongoingMovies.js";
 import "./upcomingMovies.js";
 import './components/footer.js';
-
 
 import { fetchMovieData, moviesArray } from './movies.js';
 
@@ -13,3 +13,4 @@ export const initializeMovieData = async () => {
 };
 
 export { moviesArray }; // Re-export the array
+
