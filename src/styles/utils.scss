@@ -13,6 +13,9 @@ $breakpoint-large: 992px;
     @if $point == large {
         @media (min-width: $breakpoint-large) { @content; }
     }
+    @else if $point == small {
+        @media (max-width: $breakpoint-large) { @content; }
+    }
 }
 
 // Exempel på hur man kan använda Breakpoint ifrån en mixin. 

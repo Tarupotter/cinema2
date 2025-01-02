@@ -3,6 +3,9 @@ import { initializeMovieData, moviesArray } from './main.js';
 
 const ongoingMoviesDom = document.querySelector(".ongoingMovies"); 
 
+let genres = [];
+let decades = [];
+
 const useData = async () => {
     await initializeMovieData();
 };
@@ -10,8 +13,6 @@ const useData = async () => {
 document.addEventListener("DOMContentLoaded", () => {
     useData().then((data) => InitializeOngoingMovies());
 });
-
-let genres = [] 
 
 let testArray = [
     {
@@ -34,7 +35,7 @@ let testArray = [
 
 function InitializeOngoingMovies() {
     createGenres();
-    
+    createDecades();
     createFilterProps();
     
     for (let currentIndex = 0; currentIndex < testArray.length; currentIndex++) {
@@ -81,6 +82,25 @@ function createGenres() {
     }
 }
 
+function createDecades() {
+    for (let currentMovieIndex = 0; currentMovieIndex < moviesArray["movies"].length; currentMovieIndex++) {
+        let foundDecade = false; 
+        const currentMovie = moviesArray["movies"][currentMovieIndex];
+        
+        for (let decadeIndex = 0; decadeIndex < decades.length; decadeIndex++) {
+            const currentDecade = decades[decadeIndex];
+            
+            if (currentDecade == currentMovie.decade) {
+                foundDecade = true 
+            }
+        }
+
+        if (!foundDecade) {
+            decades.push(currentMovie.decade)
+        } 
+    }
+}
+
 
 function createFilterProps() {
     const filterDiv = document.createElement("div");
@@ -111,4 +131,36 @@ function createFilterProps() {
     }
 
     // Desktop
+
+    let filterSearchField = document.createElement("input");
+    filterSearchField.classList.add("ongoingMovies__filterDiv__searchfield");
+    filterSearchField.placeholder = "Sök";
+    filterDiv.appendChild(filterSearchField);
+
+    let genreChipDiv = document.createElement("div");
+    genreChipDiv.classList.add("ongoingMovies__filterDiv__genreChipDiv");
+    filterDiv.appendChild(genreChipDiv);
+
+    for (let currentIndex = 0; currentIndex < genres.length; currentIndex++) {
+        const currentGenre = genres[currentIndex];
+        
+        let chip = document.createElement("button");
+        chip.classList.add("ongoingMovies__filterDiv__genreChipDiv__chip");
+        chip.textContent = currentGenre;
+        genreChipDiv.appendChild(chip);
+    }
+
+    for (let currentIndex = 0; currentIndex < decades.length; currentIndex++) {
+        const currentDecade = decades[currentIndex];
+        
+        let chip = document.createElement("button");
+        chip.classList.add("ongoingMovies__filterDiv__genreChipDiv__chip");
+        chip.textContent = currentDecade + "-tal";
+        genreChipDiv.appendChild(chip);
+    }
+
+    let chip = document.createElement("button");
+    chip.classList.add("ongoingMovies__filterDiv__genreChipDiv__chip");
+    chip.textContent = "Svartvit";
+    genreChipDiv.appendChild(chip);
 }
