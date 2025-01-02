@@ -1,5 +1,4 @@
 import '../styles/main.scss';
-import './aboutUs.js'
 import './header.js'
 import './nav.js'
 

@@ -26,6 +26,14 @@ header {
       font-size: 2rem;
     }
   }
+  .nav__button {
+    position: absolute;
+    right: 1.2rem;
+    top: 1rem;
+    @include breakpoint(large) {
+      display: none;
+    }
+  }
 }
 
 .stripe__container {
@@ -78,7 +86,6 @@ header {
   }
 
   .header__logo {
-    
     font-family: yesteryear;
     font-size: 5rem;
     color: $color-orange;
