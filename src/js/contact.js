@@ -54,6 +54,8 @@ const setupValidation = (validationMessages) => {
     },
   ];
 
+  const visitedFields = new Set();
+
   const validateField = (field) => {
     const input = document.getElementById(field.id);
     const error = document.getElementById(field.errorId);
@@ -61,6 +63,16 @@ const setupValidation = (validationMessages) => {
     error.textContent = "";
     input.classList.remove("invalid");
     error.classList.remove("visible");
+
+    if (field.id === "email" && input.value.trim() !== "") { 
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(input.value.trim())) { 
+        error.textContent = validationMessages.email; 
+        error.classList.add("visible");
+        input.classList.add("invalid");
+        return false; 
+      }
+    }
 
     if (field.id === "phoneNumber" && input.value.trim() !== "") {
       const phoneRegex = /^[0-9]{10}$/;
@@ -77,22 +89,21 @@ const setupValidation = (validationMessages) => {
       error.classList.add("visible");
       input.classList.add("invalid");
       return false;
-    } else {
-      error.textContent = "";
-      error.classList.remove("visible");
-      input.classList.remove("invalid");
-      return true;
     }
+      return true;
+    
   };
 
   const validateForm = () => {
     let isValid = true;
     fields.forEach((field) => {
+      if (!visitedFields.has(field.id)) return;  //
       if (!validateField(field)) {
         isValid = false;
       }
     });
     submitButton.disabled = !isValid;
+    return isValid; //
   };
 
   form.addEventListener("input", validateForm);
@@ -102,24 +113,55 @@ const setupValidation = (validationMessages) => {
     const error = document.getElementById(field.errorId);
 
     input.addEventListener("blur", () => {
+      visitedFields.add(field.id);
       if (!input.value.trim()) {
         error.textContent = field.message;
         error.classList.add("visible");
         input.classList.add("invalid");
+      } else { 
+        error.textContent = "";
+        error.classList.remove("visible");
+        input.classList.remove("invalid");  //
       }
+      validateForm();
     });
   });
 
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (!submitButton.disabled) {
-      alert("Formuläret har skickats!");
+    let isValid = true;
+  
+    fields.forEach((field) => visitedFields.add(field.id));
+  
+    fields.forEach((field) => {
+      if (!validateField(field)) {
+        isValid = false;
+      }
+    });
+  
+    if (isValid) {
+      
+      const successMessage = document.createElement("div");
+      successMessage.textContent = "Formuläret har skickats!";
+      successMessage.classList.add("success-message");
+  
+     
+      const existingMessage = document.querySelector(".success-message");
+      if (existingMessage) {
+        existingMessage.remove();
+      }
+  
+      form.appendChild(successMessage);
+  
+      
       form.reset();
-      validateForm(); //Update button and messages
+      visitedFields.clear();
+      validateForm(); 
     }
   });
-
+  
+ 
   window.addEventListener("DOMContentLoaded", () => {
-    submitButton.disabled = true; // Knappen ska vara inaktiverad när sidan laddas
-  });
-};
+    submitButton.disabled = true;
+});}
