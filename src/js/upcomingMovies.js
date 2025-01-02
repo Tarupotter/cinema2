@@ -1,5 +1,5 @@
 import "../styles/upcomingMovies.scss";
-import { observer } from './helpers/fadeIn.js';
+import { observer } from './helpers/animations/fadeIn.js';
 /*
  * Originally made by Magnus Olofsson, modified by Nils Nyberg.
  */
