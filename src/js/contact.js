@@ -1,6 +1,7 @@
 
 import '../styles/contact.scss';
 import { createFooter } from './components/footer';
+import './header.js';
 
 // Header fetch
 // Fetch file from contact.json because fetch dont work when file lies in src folder

@@ -4,6 +4,7 @@ import {
   createLanguageToggleBtn,
 } from './components/languageToggleBtn.js';
 import './components/footer.js';
+import './header.js';
 import { observer } from './helpers/fadeIn.js';
 
 import '../styles/about.scss';
@@ -72,7 +73,9 @@ const loadAboutUsItems = async (language) => {
     
       const tags = document.querySelectorAll('h2, p, img');
       tags.forEach((tag) => {
-        observer.observe(tag);
+        if (tag.classList != "header__image") {
+          observer.observe(tag);
+        }
       } );
     });
   };

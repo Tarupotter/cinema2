@@ -13,4 +13,3 @@ export const initializeMovieData = async () => {
 };
 
 export { moviesArray }; // Re-export the array
-
