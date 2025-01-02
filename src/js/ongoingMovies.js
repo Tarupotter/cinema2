@@ -88,21 +88,25 @@ function createFilterProps() {
     ongoingMoviesDom.appendChild(filterDiv);
 
     // Mobile only 
+    const selectDiv = document.createElement("div");
+    selectDiv.classList.add("ongoingMovies__filterDiv__selectDiv");
+    filterDiv.appendChild(selectDiv);
+
     const filterDropdown = document.createElement("select");
-    filterDropdown.classList.add("ongoingMovies__filterDiv__select");
-    filterDiv.appendChild(filterDropdown);
+    filterDropdown.classList.add("ongoingMovies__filterDiv__selectDiv__select");
+    selectDiv.appendChild(filterDropdown);
 
     const startingOption = new Option("Välj genre (Ingen vald)");
     startingOption.selected = true;
-    startingOption.classList.add("ongoingMovies__filterDiv__select__option");
-    filterDropdown.add(startingOption);
+    startingOption.classList.add("ongoingMovies__filterDiv__selectDiv__select__option");
+    filterDropdown.add(startingOption)
 
     for (let genreIndex = 0; genreIndex < genres.length; genreIndex++) {
         const currentGenre = genres[genreIndex];
         
         let newOption = new Option(currentGenre, "genre_" + currentGenre);
 
-        newOption.classList.add("ongoingMovies__filterDiv__select__option");
+        newOption.classList.add("ongoingMovies__filterDiv__selectDiv__select__option");
         filterDropdown.add(newOption);
     }
 
