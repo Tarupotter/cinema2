@@ -38,4 +38,55 @@
             color: $color-text;
         }
     }
+
+    &__filterDiv {
+        @include breakpoint(large) {
+            display: none;
+        }
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        &__selectDiv {
+            position: relative;
+            width: 93%;
+            border: 2px solid $color-text;
+
+            &::after {
+                content: '\f078';
+                font: normal normal normal 17px/1 FontAwesome;
+                color: $color-text;
+                right: 12px;
+                height: 34px;
+                padding: 15px 0px 0px 8px;
+                position: absolute;
+                pointer-events: none;
+            }
+
+            &__select {
+                width: 93.5%;
+                height: 3rem;
+                background-color: transparent;
+                @include font-poppins-semibold;
+                color: $color-text;
+                font-size: 1.5rem;
+                padding-left: 0.2rem;
+                outline: none;
+                border: none;
+
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+    
+                &:hover {
+                    cursor: pointer;
+                }
+    
+                &__option {
+                    background-color: $color-background;
+                }
+            }
+        }
+    }
 }
