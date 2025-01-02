@@ -4,6 +4,7 @@ import {
   currentLanguage,
   createLanguageToggleBtn,
 } from './components/languageToggleBtn.js';
+import './components/footer.js';
 
 import '../styles/cafe.scss';
 import '../styles/languageToggleBtn.scss';
@@ -69,7 +70,7 @@ const loadMenuItems = async (menu, language) => {
   setupScrollAnimation('li');
 };
 const loadCafeMenu = async (language) => {
-  const data = await fetchData('/database/cafeMenu.json');
+  const data = await fetchData('/Group-d-assignment//database/cafeMenu.json');
 
   if (data && data.menu) {
     loadMenuItems(data.menu, language);
