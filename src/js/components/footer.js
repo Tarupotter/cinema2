@@ -17,7 +17,7 @@ export async function createFooter() {
   const footerScreen = document.createElement("div");
   footerScreen.className = "footer__screen";
   const screenImg = document.createElement("img");
-  screenImg.src = "/Group-d-assignment/public/images/filmduk.png";
+  screenImg.src = "/Group-d-assignment/images/filmduk.png";
   screenImg.alt = "Illustration of a screen";
   footerScreen.appendChild(screenImg);
   footer.appendChild(footerScreen);
@@ -26,7 +26,7 @@ export async function createFooter() {
   const footerSeats = document.createElement("div");
   footerSeats.className = "footer__seats";
   const seatsImg = document.createElement("img");
-  seatsImg.src = "/Group-d-assignment/public/images/stolar.png";
+  seatsImg.src = "/Group-d-assignment/images/stolar.png";
   seatsImg.alt = "Illustration of a movie theater";
   footerSeats.appendChild(seatsImg);
   footer.appendChild(footerSeats);
