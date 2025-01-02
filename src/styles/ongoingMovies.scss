@@ -45,10 +45,15 @@
         justify-content: center;
 
         &__selectDiv {
+            @include breakpoint(large) {
+                display: none;
+            };
+        }
+
+        &__selectDiv {
             position: relative;
             width: 93%;
             border: 2px solid $color-text;
-            
 
             &::after {
                 content: '\f078';
@@ -59,12 +64,6 @@
                 padding: 15px 0px 0px 8px;
                 position: absolute;
                 pointer-events: none;
-            }
-
-            &__select { //Nesting rules
-                @include breakpoint(large) {
-                    display: none;
-                };
             }
 
             &__select {
