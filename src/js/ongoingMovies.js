@@ -1,6 +1,6 @@
 import '../styles/ongoingMovies.scss';
 import { initializeMovieData, moviesArray } from './main.js';
-import { observer } from './helpers/fadeIn.js';
+import { observer } from './helpers/animations/fadeIn.js';
 
 const ongoingMoviesDom = document.querySelector(".ongoingMovies"); 
 

@@ -7,7 +7,6 @@ import {
 import { observer } from './helpers/animations/fadeIn.js';
 import './components/footer.js';
 import './header.js';
-import { observer } from './helpers/fadeIn.js';
 
 import '../styles/about.scss';
 import '../styles/languageToggleBtn.scss';
