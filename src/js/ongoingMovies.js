@@ -1,5 +1,6 @@
 import '../styles/ongoingMovies.scss';
 import { initializeMovieData, moviesArray } from './main.js';
+import { observer } from './helpers/fadeIn.js';
 
 const ongoingMoviesDom = document.querySelector(".ongoingMovies"); 
 
@@ -55,6 +56,8 @@ function createMovieCard(props) {
         // Open Modal for future()
         // OpenInformationModal(props.data);
     });
+    
+    observer.observe(cardDiv);
 } 
 
 function createGenres() {

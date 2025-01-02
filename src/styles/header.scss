@@ -1,0 +1,100 @@
+@use "./utils.scss" as *;
+
+.header__container {
+  min-height: 10rem;
+
+  @include breakpoint(large) {
+    height: 25rem; 
+  }
+
+  .city__name {
+display: none;
+
+    @include breakpoint(large) {
+        display: block;
+    position: absolute;
+    top: 2%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-family: poppins;
+    letter-spacing: 1rem;
+    color: $color-text;
+    }
+
+  }
+}
+
+.stripe__container {
+    @include breakpoint(large) {
+    position: relative;
+    top: 10rem;
+
+    &__beige {
+      height: 2rem;
+      background-color: $color-text;
+    }
+
+    &__orange {
+      height: 2rem;
+      background-color: $color-orange;
+    }
+
+    &__red {
+      height: 2rem;
+      background-color: $color-red;
+    }
+
+    &__cyan {
+      height: 2rem;
+      background-color: $color-cyan;
+    }
+  }
+}
+
+.header__image {
+  display: none;
+  
+  @include breakpoint(large) {
+    display: block;
+    position: absolute; 
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+  }
+}
+
+.header__logo__container {
+    display: flex;
+    justify-content: center;
+    
+    @include breakpoint(large) {
+        position: absolute;
+        top: 0;
+        left: 2rem;
+      } 
+  
+
+  .header__logo {
+    font-family: yesteryear;
+    font-size: 7rem;
+    color: $color-orange;
+    font-weight: lighter;
+    margin: 0;
+  }
+
+
+  .header__logo__text {
+    display: none;
+
+    @include breakpoint(large) {
+      display: block;
+      margin: 0;
+      font-family: poppins;
+      color: $color-text;
+      position: absolute;
+      top: 8rem;
+      left: 1rem;
+      font-weight: lighter;
+    }
+  }
+}
