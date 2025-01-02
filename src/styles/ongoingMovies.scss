@@ -124,6 +124,7 @@
         }
 
         &__genreChipDiv {
+            display: none;
             width: 65%;
             &__chip {
                 @include font-poppins;
@@ -172,8 +173,8 @@
         }
 
         &__genreChipDiv {
-            @include breakpoint(small) {
-                display: none;
+            @include breakpoint(large) {
+                display: block;
             }
         }
     }
