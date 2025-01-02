@@ -61,10 +61,10 @@ body {
     @include breakpoint(large) {
       max-width: 600px;
       margin: 0 auto;
-
-    color: $color-red;
-    text-align: center;
-    margin-bottom: 20px;
+      color: $color-red;
+      text-align: center;
+      margin-bottom: 20px;
+    }
   }
 
   .contact-form {
