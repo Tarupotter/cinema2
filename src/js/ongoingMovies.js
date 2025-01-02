@@ -14,35 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
     useData().then((data) => InitializeOngoingMovies());
 });
 
-let testArray = [
-    {
-        src: "https://media.istockphoto.com/id/1147544807/sv/vektor/ingen-miniatyr-bild-vektor-grafik.jpg?s=612x612&w=0&k=20&c=RWp5ECPYkIEO8J3zxyvsc4Lrf68NiLDybtPHix_QI1I=",
-        movieLabel: "Sune i fjällen"
-    },
-    {
-        src: "https://media.istockphoto.com/id/1147544807/sv/vektor/ingen-miniatyr-bild-vektor-grafik.jpg?s=612x612&w=0&k=20&c=RWp5ECPYkIEO8J3zxyvsc4Lrf68NiLDybtPHix_QI1I=",
-        movieLabel: "Sune i Norge"
-    },
-    {
-        src: "https://media.istockphoto.com/id/1147544807/sv/vektor/ingen-miniatyr-bild-vektor-grafik.jpg?s=612x612&w=0&k=20&c=RWp5ECPYkIEO8J3zxyvsc4Lrf68NiLDybtPHix_QI1I=",
-        movieLabel: "Sune i fjällen"
-    },
-    {
-        src: "https://media.istockphoto.com/id/1147544807/sv/vektor/ingen-miniatyr-bild-vektor-grafik.jpg?s=612x612&w=0&k=20&c=RWp5ECPYkIEO8J3zxyvsc4Lrf68NiLDybtPHix_QI1I=",
-        movieLabel: "Sune i Norge"
-    },
-]
-
 function InitializeOngoingMovies() {
     createGenres();
     createDecades();
     createFilterProps();
-    
-    for (let currentIndex = 0; currentIndex < testArray.length; currentIndex++) {
-        const element = testArray[currentIndex];
+
+    for (let currentIndex = 0; currentIndex < moviesArray["movies"].length; currentIndex++) {
+        const element = moviesArray["movies"][currentIndex];
+
         createMovieCard({
-            src: element.src,
-            movieLabel: element.movieLabel
+            src: element.coverimage,
+            movieLabel: element.title
         })
     };
 }
@@ -131,24 +113,9 @@ function createFilterProps() {
     }
 
     // Desktop
-
-    let filterSearchField = document.createElement("input");
-    filterSearchField.classList.add("ongoingMovies__filterDiv__searchfield");
-    filterSearchField.placeholder = "Sök";
-    filterDiv.appendChild(filterSearchField);
-
     let genreChipDiv = document.createElement("div");
     genreChipDiv.classList.add("ongoingMovies__filterDiv__genreChipDiv");
     filterDiv.appendChild(genreChipDiv);
-
-    for (let currentIndex = 0; currentIndex < genres.length; currentIndex++) {
-        const currentGenre = genres[currentIndex];
-        
-        let chip = document.createElement("button");
-        chip.classList.add("ongoingMovies__filterDiv__genreChipDiv__chip");
-        chip.textContent = currentGenre;
-        genreChipDiv.appendChild(chip);
-    }
 
     for (let currentIndex = 0; currentIndex < decades.length; currentIndex++) {
         const currentDecade = decades[currentIndex];
@@ -159,8 +126,22 @@ function createFilterProps() {
         genreChipDiv.appendChild(chip);
     }
 
+    for (let currentIndex = 0; currentIndex < genres.length; currentIndex++) {
+        const currentGenre = genres[currentIndex];
+        
+        let chip = document.createElement("button");
+        chip.classList.add("ongoingMovies__filterDiv__genreChipDiv__chip");
+        chip.textContent = currentGenre;
+        genreChipDiv.appendChild(chip);
+    }
+
     let chip = document.createElement("button");
     chip.classList.add("ongoingMovies__filterDiv__genreChipDiv__chip");
     chip.textContent = "Svartvit";
     genreChipDiv.appendChild(chip);
+
+    let filterSearchField = document.createElement("input");
+    filterSearchField.classList.add("ongoingMovies__filterDiv__genreChipDiv__searchfield");
+    filterSearchField.placeholder = "Sök";
+    genreChipDiv.appendChild(filterSearchField);
 }
