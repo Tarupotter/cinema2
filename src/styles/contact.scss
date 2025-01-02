@@ -26,6 +26,13 @@ body {
     box-shadow: 0 6px 10px $color-orange;
     border-radius: 12px;
 
+    input { 
+      width: 100%;
+    }
+    textarea { 
+      width: 100%; 
+    }
+
     .contact-form__label--name,
     .contact-form__label--email,
     .contact-form__label--phoneNumber,
