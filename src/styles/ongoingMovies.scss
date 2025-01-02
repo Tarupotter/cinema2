@@ -20,10 +20,11 @@
 
     &__card {
         width: calc(50% - 2rem);
-        height: auto;
+        height: 90%;
         padding: 1rem;
         flex: 0 0 calc(50% - 2rem);
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
+        // margin: auto;
         
         &__image {
             width: 100%;
@@ -35,7 +36,7 @@
             display: flex;
             justify-content: center;
             margin: 0;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             @include font-poppins;
             color: $color-text;
         }

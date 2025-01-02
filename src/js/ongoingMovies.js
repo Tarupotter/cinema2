@@ -24,7 +24,8 @@ function InitializeOngoingMovies() {
 
         createMovieCard({
             src: element.coverimage,
-            movieLabel: element.title
+            movieLabel: element.title,
+            data: element,
         })
     };
 }
@@ -34,16 +35,27 @@ function createMovieCard(props) {
     cardDiv.classList.add("ongoingMovies__card");
     ongoingMoviesDom.appendChild(cardDiv);
 
+
     const cardImage = document.createElement("img");
     cardImage.src = props.src;
     cardImage.classList.add("ongoingMovies__card__image")
     cardDiv.appendChild(cardImage);
 
+    cardImage.addEventListener("click", () => {
+        // Open Modal for future()
+        // OpenInformationModal(props.data);
+    });
+
     const cardLabel = document.createElement("h3");
     cardLabel.innerHTML = props.movieLabel; 
     cardLabel.classList.add("ongoingMovies__card__label");
     cardDiv.appendChild(cardLabel);
-}
+    
+    cardLabel.addEventListener("click", () => {
+        // Open Modal for future()
+        // OpenInformationModal(props.data);
+    });
+} 
 
 function createGenres() {
     for (let currentMovieIndex = 0; currentMovieIndex < moviesArray["movies"].length; currentMovieIndex++) {
