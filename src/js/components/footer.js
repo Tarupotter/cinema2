@@ -3,7 +3,7 @@ import "../../styles/footer.scss";
 
 export async function createFooter() {
 
-  const data = await fetchData("../../database/footer.json");
+  const data = await fetchData("../../../database/footer.json");
 
   if (!data) {
     console.error("Invalid data not found");

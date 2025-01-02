@@ -10,14 +10,9 @@ const useData = async () => {
     await initializeMovieData();
 };
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     useData().then((data) => InitializeOngoingMovies());
-// });
-
-
-setTimeout(() => {
+document.addEventListener("DOMContentLoaded", () => {
     useData().then((data) => InitializeOngoingMovies());
-}, 5000);
+});
 
 let testArray = [
     {
