@@ -27,9 +27,11 @@ header {
     }
   }
   .nav__button {
-    position: absolute;
-    right: 1.2rem;
-    top: 1rem;
+    width: 2.5rem;
+    position: fixed;
+    right: 1.5rem;
+    top: 1.6rem;
+    z-index: 999;
     @include breakpoint(large) {
       display: none;
     }
