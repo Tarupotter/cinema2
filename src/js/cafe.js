@@ -8,6 +8,7 @@ import './components/footer.js';
 
 import '../styles/cafe.scss';
 import '../styles/languageToggleBtn.scss';
+import './header.js';
 
 const menuContainer = document.querySelector('#cafe-menu-container');
 
