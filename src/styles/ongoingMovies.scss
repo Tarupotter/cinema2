@@ -16,12 +16,15 @@
     height: auto;
     overflow: hidden;
 
+    padding: 0 2.5rem 0 2.5rem;
+
     &__card {
         width: calc(50% - 2rem);
-        height: auto;
+        height: 90%;
         padding: 1rem;
         flex: 0 0 calc(50% - 2rem);
         margin-bottom: 2rem;
+        // margin: auto;
         
         &__image {
             width: 100%;
@@ -33,9 +36,14 @@
             display: flex;
             justify-content: center;
             margin: 0;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             @include font-poppins;
             color: $color-text;
+        }
+
+        @include breakpoint(large) {
+            width: calc((100% / 6) - 2rem);
+            flex: 0 0 calc((100% / 6) - 2rem);
         }
     }
 
@@ -52,7 +60,7 @@
 
         &__selectDiv {
             position: relative;
-            width: 93%;
+            width: 93.5%;
             border: 2px solid $color-text;
 
             &::after {
@@ -97,9 +105,9 @@
             border: 2px solid $color-text;
             background-color: transparent;
             height: 2.5rem;
-            width: 12%;
             color: $color-text;
             padding-left: 0.5rem;
+            margin-left: 1rem;
 
             &:active {
                 outline: none;
@@ -116,7 +124,8 @@
         }
 
         &__genreChipDiv {
-            
+            display: none;
+            width: 65%;
             &__chip {
                 @include font-poppins;
                 border: 2px solid $color-text;
@@ -135,11 +144,37 @@
                     cursor: pointer;
                 }
             }
+
+            &__searchfield {
+                @include font-poppins;
+                font-size: 1.2rem;
+                outline: none;
+                border: 2px solid $color-text;
+                background-color: transparent;
+                height: 2.5rem;
+                color: $color-text;
+                padding-left: 0.5rem;
+                margin-left: 1rem;
+                margin-bottom: 1rem;
+    
+                &:active {
+                    outline: none;
+                    color: white;
+                }
+    
+                &::placeholder {
+                    color: $color-text;
+                }
+    
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
         }
 
-        &__searchfield, &__genreChipDiv {
-            @include breakpoint(small) {
-                display: none;
+        &__genreChipDiv {
+            @include breakpoint(large) {
+                display: block;
             }
         }
     }
