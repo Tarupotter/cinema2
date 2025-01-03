@@ -1,3 +1,5 @@
+import '../styles/carousel.scss';
+
 // Select all buttons with the data attribute for navigation
 const buttons = document.querySelectorAll("[data-carousel-button]");
 
