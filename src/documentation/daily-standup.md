@@ -53,7 +53,7 @@
   Det finns inte riktigt några hinder i nuläget.
 
 - Magnus - Har fixat med filterings chipsen & searchfieldet för desktopvyn. Jag har inte haft några problem med detta. Mitt nästa steg är att fixa med all styling för ongoingMovies att bli responsiv och implementera API hämtningen av filmer till alla kort som grunden gjordes i tidigare PBI vilket är issue #49.
-- Jörgen -
+- Jörgen - Har börjat börjat med footer-kortet.
 - Taru -
 - Bekhal - Half way with my carousel, got a little difficult at first. The pictures didn't show but managed at last to get the right info from the json file to my carousel.
 
@@ -71,7 +71,7 @@
   och validering och styling korten ligger i review nu.
   Inga hinder just nu.
 - Magnus - Jag har fixat klart all styling & implementationen av API'n för ongoingMovies sektionen. Det har gått bra och inte stött på några värre problem. Nästa dag ska jag kolla med PR's och se så allt är klart och redo att buildas och deployas. 
-- Jörgen -
+- Jörgen - Är klar med Footer som har tagit bra mycket längre tid än vad som beräknades. Mycket beroende på att jag lade till dynamisk laddning från json-fil. Jag har också reviewat en hel del.
 - Taru -
 - Bekhal - All CSS, close to finish line. Other that focus is to review team mates codes.
 
