@@ -1,6 +1,10 @@
 **[2024-12-23]** - Standup
 
 - Elena -
+    * Har börjat med att skapa HTML,JS och json filer och har lagt till strukturen. har skapat en fetchData funktion, toggleLanguage funktion och lyckades generera all data på DOM dynamiskt just nu är jag klar med issue 45#.
+    * Mitt Nästa steg är att börja med issue #46 och implementera vyn.
+    * Har inga hinder att genemföra nästa steget
+
 - Nils -
 - Tobias -
   Har börjat att skapa HTML, scss, js och json. Har gjort grundläggande styling och fetchar grundläggande json data i js för formuläret.  
@@ -12,11 +16,17 @@
 - Jörgen - movies.json är i done med 16 filmer. Det finns med två filmer från varje årtionde.
   Coverbilder och slidebilder ligger också i done och ligger i var sin mapp i mappen images.
 - Taru -
+
 - Bekhal - Created a shell to the top carousel. Both in html and javascript. The up coming hours I will do research on how I best can connect the JSON-file and carousel however can't actually do it until JSON-file is done.
+
 
 **[2024-12-27]** - Standup
 
 - Elena -
+  * Har fixat Mobile+Desktop Styling och animationer och är klar med issue #45
+  * Mitt nästa steg är att börja med issue #48
+  * har inga hinder att påbörja nästa steg.
+
 - Nils -
 - Tobias - Har gjort färdigt min första PBI och grunden för kommande arbete. Har gjort min PR och beskrivit vad jag gjort.
   Jag kommer härnäst att skapa en ny branch för att fortsätta med att finjustera formuläret så att detta fungerar.
@@ -25,27 +35,46 @@
 - Magnus -
 - Jörgen - movies.js i done hämtar data från movies.json och exporterar vidare till main.js som exporterar arrayen vidare till andra delar av webbplatsen.
 - Taru -
+
 - Bekhal - Now that json-file is done I can offically start implementing it into my carousel.
+
+
 
 **[2024-12-30]** - Standup
 
-- Elena -
+- Elena - 
+    * Jag är klar med issue #48 och har skapat HTML,JS, Json för att att dynamiskt hämta all data dynamiskt
+    * Mitt nästa steg att implementera all styling och animationer som står på issue #47
+    * Har ingen hinder att påbörja med nästa issue.
+
 - Nils -
-- Tobias -
+- Tobias - Har fixat validering för input fälten med json, js och html samt scss.
+  Kommande arbete kommer jag att göra navigering till contact.html sida och kanske fixa styling kortet.
+  Det finns inte riktigt några hinder i nuläget.
+
 - Magnus -
 - Jörgen -
 - Taru -
 - Bekhal - Half way with my carousel, got a little difficult at first. The pictures didn't show but managed at last to get the right info from the json file to my carousel.
 
+
 **[2025-01-02]** - Standup
 
 - Elena -
+    * Jag är klar med issue# 47
+    * tänkte påbörja arbetet med issue # 77 att lägga till en Cart och ändra på cafe.js så att gästerna har möjlighet att beställa från cafe menyn på online för nästa arbetsdag kommer jag att sätta planering och structur för cafe filen.
+    * har inga hinder att börja med nästa uppgift 
+   
 - Nils -
-- Tobias -
+- Tobias - Har fixat mer med validerings kortet och även gjort styling för formuläret.
+  Kommer fortsätta med dessa kort för att få klart mina 3 PBI, har en i done nu.
+  och validering och styling korten ligger i review nu.
+  Inga hinder just nu.
 - Magnus -
 - Jörgen -
 - Taru -
 - Bekhal - All CSS, close to finish line. Other that focus is to review team mates codes.
+
 
 **[2025-01-03]** - Standup
 

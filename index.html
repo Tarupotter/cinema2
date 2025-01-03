@@ -13,11 +13,19 @@
     <meta name="robots" content="index, follow" />
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/carousel.css">
   </head>
   <body>
-    <section class="newest">
+    <!-- Header -->
+    <header class="header">
+      <div class="header__container"></div>
+    </header>
+
+
+    <!-- Karusell topcontent -->
+     <section class="newest">
       <div class="carousel">
         <div class="slides">
           <div class="slide"></div>
@@ -28,6 +36,7 @@
         <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
       </div>
     </section>
+
 
     <!-- Filmer som visas nu -->
     <section class="ongoingMoviesSection" id="ongoingMoviesSection">
@@ -41,13 +50,16 @@
     </section>
 
     <!-- Kommande filmer -->
-    <section></section>
+    <section class="upcomingMoviesSection">
+      <h2 class="upcomingMoviesSection__header">Filmer som kommer</h2>
+      <div class="upcomingMovies"></div>
+    </section>
 
     <!-- Biogåvan -->
     <section class="gift-section">
       <h2 class="gift-section__header">BIOGÅVA</h2>
       <div class="gift-section__img-container">
-        <img class="gift-section__gift-image" src="images/popcorn.png" />
+        <img class="gift-section__gift-image" src="./images/popcorn.png"/>
         <p class="gift-section__gift-text">
           Ge bort en bioupplevelse till någon du bryr dig om!
         </p>
@@ -56,8 +68,7 @@
     </section>
 
     <!-- Footer -->
-    <footer></footer>
+    <footer class="footer"></footer>
 
-    <script src="./src/js/carousel.js"></script>
   </body>
 </html>
