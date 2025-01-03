@@ -5,10 +5,10 @@ import {
   createLanguageToggleBtn,
 } from './components/languageToggleBtn.js';
 import './components/footer.js';
-
+import './header.js';
 import '../styles/cafe.scss';
 import '../styles/languageToggleBtn.scss';
-import './header.js';
+
 
 const menuContainer = document.querySelector('#cafe-menu-container');
 
