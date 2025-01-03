@@ -6,6 +6,8 @@
     * Har inga hinder att genemföra nästa steget
 
 - Nils -
+  Har börjat med att skapa biogåvan och en mall för korten, under kommande filmer. Det jag ska göra härnäst är att bekanta mig med Vite och fortsätta med biogåvan innan jag går vidare till mina film PBI:er.
+  Har inga direkta hinder utan att bekanta mig mer med Vite.
 - Tobias -
   Har börjat att skapa HTML, scss, js och json. Har gjort grundläggande styling och fetchar grundläggande json data i js för formuläret.  
   Kommande timmar kommer jag fortsätta med grundläggande HTML och möjligen byta till ny branch för att fortsätta med kontaktformuläret.
@@ -28,6 +30,7 @@
   * har inga hinder att påbörja nästa steg.
 
 - Nils -
+  Har skapat klart alla element i sektionen med biogåvan. Härnäst ska jag designa sektionen enligt Figma, för både mobilvy, samt desktopvy. Inga hinder än så länge.
 - Tobias - Har gjort färdigt min första PBI och grunden för kommande arbete. Har gjort min PR och beskrivit vad jag gjort.
   Jag kommer härnäst att skapa en ny branch för att fortsätta med att finjustera formuläret så att detta fungerar.
   Svårigheter är att påbörja styling på header och footer då den ej är färdig. Har gjort placeholders för tillfället och planerar att fortsätta med detta arbete i PBI kortet som avser styling.
@@ -48,6 +51,7 @@
     * Har ingen hinder att påbörja med nästa issue.
 
 - Nils -
+  Jag har designat klart biogåvan enligt min PBI. Nu ska jag fortsätta med filmkorten för kommande filmer, samt skapa en enkel design för att underlätta navigation på hemsidan. Jag har inte stött på några hinder med filmkorten hittills.
 - Tobias - Har fixat validering för input fälten med json, js och html samt scss.
   Kommande arbete kommer jag att göra navigering till contact.html sida och kanske fixa styling kortet.
   Det finns inte riktigt några hinder i nuläget.
@@ -66,6 +70,7 @@
     * har inga hinder att börja med nästa uppgift 
    
 - Nils -
+  Jag har gjort klart mallen för filmkorten och efterliknat Magnus sektion för aktuella filmer. Hädanefter ska jag hämta all filmdata från en JSON-fil som gör att filmerna kan uppdateras dynamiskt. Inga hinder än så länge.
 - Tobias - Har fixat mer med validerings kortet och även gjort styling för formuläret.
   Kommer fortsätta med dessa kort för att få klart mina 3 PBI, har en i done nu.
   och validering och styling korten ligger i review nu.
