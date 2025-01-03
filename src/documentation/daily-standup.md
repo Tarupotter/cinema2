@@ -56,8 +56,9 @@
 
 - Elena -
     * Jag är klar med issue# 47
-    * tänkte påbörja arbetet med issue # 77 att lägga till en Cart och ändra på cafe.js så att gästerna har möjlighet att beställa från cafe menyn på online
+    * tänkte påbörja arbetet med issue # 77 att lägga till en Cart och ändra på cafe.js så att gästerna har möjlighet att beställa från cafe menyn på online för nästa arbetsdag kommer jag att sätta planering och structur för cafe filen.
     * har inga hinder att börja med nästa uppgift 
+    
 - Nils -
 - Tobias - Har fixat mer med validerings kortet och även gjort styling för formuläret.
   Kommer fortsätta med dessa kort för att få klart mina 3 PBI, har en i done nu.
