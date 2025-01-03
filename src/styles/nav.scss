@@ -43,6 +43,7 @@ nav {
   left: 1rem;
   text-transform: uppercase;
   background-color: $color-background;
+  z-index: 998;
 
   ul {
     font-family: poppins;
