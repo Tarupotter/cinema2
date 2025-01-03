@@ -1,54 +1,58 @@
 **[2024-12-23]** - Standup
-* Elena - 
-* Nils -
-* Tobias - 
-Har börjat att skapa HTML, scss, js och json. Har gjort grundläggande styling   och fetchar grundläggande json data i js för formuläret.  
-Kommande timmar kommer jag fortsätta med grundläggande HTML och möjligen byta till ny branch för att fortsätta med kontaktformuläret. 
-Hinder kan vara att implementera stylen från header och footer från main sidan. 
-Detta går att kringå genom att fylla height i header och footer med mått i scss.
 
+- Elena -
+- Nils -
+- Tobias -
+  Har börjat att skapa HTML, scss, js och json. Har gjort grundläggande styling och fetchar grundläggande json data i js för formuläret.  
+  Kommande timmar kommer jag fortsätta med grundläggande HTML och möjligen byta till ny branch för att fortsätta med kontaktformuläret.
+  Hinder kan vara att implementera stylen från header och footer från main sidan.
+  Detta går att kringå genom att fylla height i header och footer med mått i scss.
 
-* Magnus -
-* Jörgen - movies.json är i done med 16 filmer. Det finns med två filmer från varje årtionde.
-            Coverbilder och slidebilder ligger också i done och ligger i var sin mapp i mappen images. 
-* Taru -
-* Bekhal -  
+- Magnus -
+- Jörgen - movies.json är i done med 16 filmer. Det finns med två filmer från varje årtionde.
+  Coverbilder och slidebilder ligger också i done och ligger i var sin mapp i mappen images.
+- Taru -
+- Bekhal - Created a shell to the top carousel. Both in html and javascript. The up coming hours I will do research on how I best can connect the JSON-file and carousel however can't actually do it until JSON-file is done.
 
 **[2024-12-27]** - Standup
-* Elena - 
-* Nils -
-* Tobias - Har gjort färdigt min första PBI och grunden för kommande arbete. Har gjort min PR och beskrivit vad jag gjort. 
-Jag kommer härnäst att skapa en ny branch för att fortsätta med att finjustera formuläret så att detta fungerar. 
-Svårigheter är att påbörja styling på header och footer då den ej är färdig. Har gjort placeholders för tillfället och planerar att fortsätta med detta arbete i PBI kortet som avser styling.
 
-* Magnus -
-* Jörgen - movies.js i done hämtar data från movies.json och exporterar vidare till main.js som exporterar arrayen vidare till andra delar av webbplatsen.
-* Taru -
-* Bekhal -  
+- Elena -
+- Nils -
+- Tobias - Har gjort färdigt min första PBI och grunden för kommande arbete. Har gjort min PR och beskrivit vad jag gjort.
+  Jag kommer härnäst att skapa en ny branch för att fortsätta med att finjustera formuläret så att detta fungerar.
+  Svårigheter är att påbörja styling på header och footer då den ej är färdig. Har gjort placeholders för tillfället och planerar att fortsätta med detta arbete i PBI kortet som avser styling.
+
+- Magnus -
+- Jörgen - movies.js i done hämtar data från movies.json och exporterar vidare till main.js som exporterar arrayen vidare till andra delar av webbplatsen.
+- Taru -
+- Bekhal - Now that json-file is done I can offically start implementing it into my carousel.
 
 **[2024-12-30]** - Standup
-* Elena - 
-* Nils -
-* Tobias - 
-* Magnus -
-* Jörgen - 
-* Taru -
-* Bekhal -  
+
+- Elena -
+- Nils -
+- Tobias -
+- Magnus -
+- Jörgen -
+- Taru -
+- Bekhal - Half way with my carousel, got a little difficult at first. The pictures didn't show but managed at last to get the right info from the json file to my carousel.
 
 **[2025-01-02]** - Standup
-* Elena - 
-* Nils -
-* Tobias - 
-* Magnus -
-* Jörgen - 
-* Taru -
-* Bekhal -  
+
+- Elena -
+- Nils -
+- Tobias -
+- Magnus -
+- Jörgen -
+- Taru -
+- Bekhal - All CSS, close to finish line. Other that focus is to review team mates codes.
 
 **[2025-01-03]** - Standup
-* Elena - 
-* Nils -
-* Tobias - 
-* Magnus -
-* Jörgen - 
-* Taru -
-* Bekhal -  
+
+- Elena -
+- Nils -
+- Tobias -
+- Magnus -
+- Jörgen -
+- Taru -
+- Bekhal -
