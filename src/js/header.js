@@ -1,9 +1,10 @@
-import '../styles/header.scss';
-import { createLogo } from './stripes.js'
+import "../styles/header.scss";
+import { createLogo } from "./stripes.js";
+import { loadNavbar } from'./nav.js';
 
-function createHeader() {
-  createLogo()
-  
+export function createHeader() {
+  createLogo();
+  loadNavbar();
 
 }
 
