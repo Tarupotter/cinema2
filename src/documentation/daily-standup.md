@@ -16,7 +16,9 @@
 - Jörgen - movies.json är i done med 16 filmer. Det finns med två filmer från varje årtionde.
   Coverbilder och slidebilder ligger också i done och ligger i var sin mapp i mappen images.
 - Taru -
-- Bekhal -
+
+- Bekhal - Created a shell to the top carousel. Both in html and javascript. The up coming hours I will do research on how I best can connect the JSON-file and carousel however can't actually do it until JSON-file is done.
+
 
 **[2024-12-27]** - Standup
 
@@ -33,7 +35,10 @@
 - Magnus -
 - Jörgen - movies.js i done hämtar data från movies.json och exporterar vidare till main.js som exporterar arrayen vidare till andra delar av webbplatsen.
 - Taru -
-- Bekhal -
+
+- Bekhal - Now that json-file is done I can offically start implementing it into my carousel.
+
+
 
 **[2024-12-30]** - Standup
 
@@ -50,7 +55,8 @@
 - Magnus -
 - Jörgen -
 - Taru -
-- Bekhal -
+- Bekhal - Half way with my carousel, got a little difficult at first. The pictures didn't show but managed at last to get the right info from the json file to my carousel.
+
 
 **[2025-01-02]** - Standup
 
@@ -58,7 +64,7 @@
     * Jag är klar med issue# 47
     * tänkte påbörja arbetet med issue # 77 att lägga till en Cart och ändra på cafe.js så att gästerna har möjlighet att beställa från cafe menyn på online för nästa arbetsdag kommer jag att sätta planering och structur för cafe filen.
     * har inga hinder att börja med nästa uppgift 
-    
+   
 - Nils -
 - Tobias - Har fixat mer med validerings kortet och även gjort styling för formuläret.
   Kommer fortsätta med dessa kort för att få klart mina 3 PBI, har en i done nu.
@@ -67,7 +73,8 @@
 - Magnus -
 - Jörgen -
 - Taru -
-- Bekhal -
+- Bekhal - All CSS, close to finish line. Other that focus is to review team mates codes.
+
 
 **[2025-01-03]** - Standup
 
