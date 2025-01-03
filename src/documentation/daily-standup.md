@@ -15,7 +15,7 @@
 - Magnus - Skapat grunden till ongoingMovies cards för att visa upp filmerna, har gjort en grund med en dummy array för testing av att skapa korten ifrån JS genom array. Mitt nästa steg är att påbörja issue #51 med mobile dropdown menu för genre filtrering. Jag har inte stött på några problem.
 - Jörgen - movies.json är i done med 16 filmer. Det finns med två filmer från varje årtionde.
   Coverbilder och slidebilder ligger också i done och ligger i var sin mapp i mappen images.
-- Taru -
+- Taru - Börjat med att skapa header och ränderna som ska finnas där, inga hinder.
 
 - Bekhal - Created a shell to the top carousel. Both in html and javascript. The up coming hours I will do research on how I best can connect the JSON-file and carousel however can't actually do it until JSON-file is done.
 
@@ -34,7 +34,7 @@
 
 - Magnus - Jag har skapat dropdown menun för filteringen och styleat den för mobilvy. Mitt nästa steg är att påbörja skapandet av filtrerings chips & searchfield för datorvyn, dv.s issue #52. Har inte stött på några problem med detta
 - Jörgen - movies.js i done hämtar data från movies.json och exporterar vidare till main.js som exporterar arrayen vidare till andra delar av webbplatsen.
-- Taru -
+- Taru - Fortsätter med header, hinder att jag råkade börja jobba med ett nytt pbi i samma branch.
 
 - Bekhal - Now that json-file is done I can offically start implementing it into my carousel.
 
@@ -54,7 +54,7 @@
 
 - Magnus - Har fixat med filterings chipsen & searchfieldet för desktopvyn. Jag har inte haft några problem med detta. Mitt nästa steg är att fixa med all styling för ongoingMovies att bli responsiv och implementera API hämtningen av filmer till alla kort som grunden gjordes i tidigare PBI vilket är issue #49.
 - Jörgen - Har börjat börjat med footer-kortet.
-- Taru -
+- Taru - Gör logos till header, inga hinder.
 - Bekhal - Half way with my carousel, got a little difficult at first. The pictures didn't show but managed at last to get the right info from the json file to my carousel.
 
 
@@ -72,7 +72,7 @@
   Inga hinder just nu.
 - Magnus - Jag har fixat klart all styling & implementationen av API'n för ongoingMovies sektionen. Det har gått bra och inte stött på några värre problem. Nästa dag ska jag kolla med PR's och se så allt är klart och redo att buildas och deployas. 
 - Jörgen - Är klar med Footer som har tagit bra mycket längre tid än vad som beräknades. Mycket beroende på att jag lade till dynamisk laddning från json-fil. Jag har också reviewat en hel del.
-- Taru -
+- Taru - Gjort en json fil till navbar, skapar navbar och jobbar då med sista Pbi:n och ska fortsätta med det. Lite hinder med att få det responsivt.
 - Bekhal - All CSS, close to finish line. Other that focus is to review team mates codes.
 
 
