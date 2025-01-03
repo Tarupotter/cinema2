@@ -10,7 +10,7 @@ body {
     background-color: #f7f7f7;
 }
 
-/* New Section Styles */
+/* New Section Styles */ 
 section.newest {
     margin-top: 20px;
     display: flex;
@@ -19,7 +19,7 @@ section.newest {
     min-height: 70vh;
 }
 
-/* Carousel Styles */
+/*Carousel Style*/
 .carousel {
     position: relative;
     width: 100%;
