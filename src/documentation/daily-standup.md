@@ -12,7 +12,7 @@
   Hinder kan vara att implementera stylen från header och footer från main sidan.
   Detta går att kringå genom att fylla height i header och footer med mått i scss.
 
-- Magnus -
+- Magnus - Skapat grunden till ongoingMovies cards för att visa upp filmerna, har gjort en grund med en dummy array för testing av att skapa korten ifrån JS genom array. Mitt nästa steg är att påbörja issue #51 med mobile dropdown menu för genre filtrering. Jag har inte stött på några problem.
 - Jörgen - movies.json är i done med 16 filmer. Det finns med två filmer från varje årtionde.
   Coverbilder och slidebilder ligger också i done och ligger i var sin mapp i mappen images.
 - Taru -
@@ -32,7 +32,7 @@
   Jag kommer härnäst att skapa en ny branch för att fortsätta med att finjustera formuläret så att detta fungerar.
   Svårigheter är att påbörja styling på header och footer då den ej är färdig. Har gjort placeholders för tillfället och planerar att fortsätta med detta arbete i PBI kortet som avser styling.
 
-- Magnus -
+- Magnus - Jag har skapat dropdown menun för filteringen och styleat den för mobilvy. Mitt nästa steg är att påbörja skapandet av filtrerings chips & searchfield för datorvyn, dv.s issue #52. Har inte stött på några problem med detta
 - Jörgen - movies.js i done hämtar data från movies.json och exporterar vidare till main.js som exporterar arrayen vidare till andra delar av webbplatsen.
 - Taru -
 
@@ -52,7 +52,7 @@
   Kommande arbete kommer jag att göra navigering till contact.html sida och kanske fixa styling kortet.
   Det finns inte riktigt några hinder i nuläget.
 
-- Magnus -
+- Magnus - Har fixat med filterings chipsen & searchfieldet för desktopvyn. Jag har inte haft några problem med detta. Mitt nästa steg är att fixa med all styling för ongoingMovies att bli responsiv och implementera API hämtningen av filmer till alla kort som grunden gjordes i tidigare PBI vilket är issue #49.
 - Jörgen -
 - Taru -
 - Bekhal - Half way with my carousel, got a little difficult at first. The pictures didn't show but managed at last to get the right info from the json file to my carousel.
@@ -70,7 +70,7 @@
   Kommer fortsätta med dessa kort för att få klart mina 3 PBI, har en i done nu.
   och validering och styling korten ligger i review nu.
   Inga hinder just nu.
-- Magnus -
+- Magnus - Jag har fixat klart all styling & implementationen av API'n för ongoingMovies sektionen. Det har gått bra och inte stött på några värre problem. Nästa dag ska jag kolla med PR's och se så allt är klart och redo att buildas och deployas. 
 - Jörgen -
 - Taru -
 - Bekhal - All CSS, close to finish line. Other that focus is to review team mates codes.
