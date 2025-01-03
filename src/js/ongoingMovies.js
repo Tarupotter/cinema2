@@ -1,5 +1,6 @@
 import '../styles/ongoingMovies.scss';
 import { initializeMovieData, moviesArray } from './main.js';
+import { observer } from './helpers/animations/fadeIn.js';
 
 const ongoingMoviesDom = document.querySelector(".ongoingMovies"); 
 
@@ -61,6 +62,7 @@ function createMovieCard(props) {
     cardLabel.innerHTML = props.movieLabel; 
     cardLabel.classList.add("ongoingMovies__card__label");
     cardDiv.appendChild(cardLabel);
+    observer.observe(cardDiv);
 }
 
 function createGenres() {
