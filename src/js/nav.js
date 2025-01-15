@@ -30,7 +30,7 @@ export async function loadNavbar() {
 
     const navButton = document.createElement("img");
     navButton.classList.add("nav__button");
-    navButton.src = "/Group-d-assignment/public/images/sliders/hamburger.png";
+    navButton.src = "/Group-d-assignment/images/sliders/hamburger.png";
     navButton.alt = "button for navbar";
 
     document.querySelector(".header__container").prepend(navButton);
