@@ -7,7 +7,7 @@ import './header.js';
 // Fetch file from contact.json because fetch dont work when file lies in src folder
 // Footer fetch
 
-fetch("./database/contact.json")
+fetch("/database/contact.json")
   .then((response) => {
     if (!response.ok) {
       throw new Error("Network response was not ok");
