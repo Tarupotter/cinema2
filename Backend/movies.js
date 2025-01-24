@@ -6,9 +6,9 @@ const res = await fetch ('https://plankton-app-xhkom.ondigitalocean.app/api/movi
     return payload.data; 
 }
 
-export async function oneMovie() {
-    const res = await fetch ('https://plankton-app-xhkom.ondigitalocean.app/api/movies/<id>');
+export async function oneMovie(id) {
+    const res = await fetch(`https://plankton-app-xhkom.ondigitalocean.app/api/movies/${id}`);
     const payload = await res.json();
-    return payload.data; 
+    return payload.data;
 }
 

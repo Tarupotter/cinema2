@@ -7,7 +7,7 @@ import { allMovies, oneMovie } from './movies.js';
 const app = express();
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
-app.set('views', './views');
+app.set('views', './Backend/views');
 
 
 async function renderPage(res, page, theTitle) {
@@ -28,12 +28,12 @@ app.get('/movies', async (req, res) =>{
     const movies = await allMovies();
     res.render("movies", { movies })
 }); 
-/*
+
 app.get("/movies/:movieId", async (req, res) => {
-    const movie = await loadMovie(req.params.movieId);
+    const movie = await oneMovie(req.params.movieId);
     res.render("movie", { movie });
   });
-  */
+  
 app.get('/cafe', (req, res) =>{
     renderPage(res, 'cafe', 'Servering');
 });
@@ -50,9 +50,9 @@ app.get('/contact', (req, res) =>{
 
 
 /*app.use('/Group-d-assignment', express.static('../dist/assets')); */
-app.use('/assets', express.static('../dist/assets'));
-app.use('/images', express.static('../dist/images'));
-app.use('/database', express.static('../dist/database'));
+app.use('/assets', express.static('./dist/assets'));
+app.use('/images', express.static('./dist/images'));
+app.use('/database', express.static('./dist/database'));
 
 app.listen(5080, () => {
 console.log('running on port 5080');
