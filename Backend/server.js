@@ -1,11 +1,14 @@
 import express from 'express';
-/*import fs from 'fs/promises';   Behöver jag denna längre?!? */
+import fs from 'fs/promises';  /* Behöver jag denna längre?!? */
 import { engine } from 'express-handlebars';
+import { allMovies, oneMovie } from './movies.js';
+
 
 const app = express();
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
+
 
 async function renderPage(res, page, theTitle) {
     console.log(`Rendering page: ${page}`); 
@@ -21,10 +24,16 @@ app.get('/index', (req, res) =>{
     renderPage(res, 'index', 'Retro');
 });
 
-app.get('/movies', (req, res) =>{
-    renderPage(res, 'movies', 'Filmer');
-});
-
+app.get('/movies', async (req, res) =>{
+    const movies = await allMovies();
+    res.render("movies", { movies })
+}); 
+/*
+app.get("/movies/:movieId", async (req, res) => {
+    const movie = await loadMovie(req.params.movieId);
+    res.render("movie", { movie });
+  });
+  */
 app.get('/cafe', (req, res) =>{
     renderPage(res, 'cafe', 'Servering');
 });
@@ -36,6 +45,7 @@ app.get('/about', (req, res) =>{
 app.get('/contact', (req, res) =>{
     renderPage(res, 'contact', 'Kontakta oss');
 });
+
 
 
 
