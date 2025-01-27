@@ -1,7 +1,6 @@
 import express from "express";
-import fs from "fs/promises"; /* Behöver jag denna längre?!? */
 import { engine } from "express-handlebars";
-import { allMovies, oneMovie } from "./movies.js";
+
 
 function initApp(api) {
   const app = express();
