@@ -1,19 +1,19 @@
 <ul class="movie-list">
   {{#each movies}}
     <li>
-      {{#if this.attributes.image.url}}
+      {{#if this.image.url}}
         <a href="/movies/{{this.id}}">
           <img
             class="image"
-            src="{{this.attributes.image.url}}"
-            alt="{{this.attributes.title}}"
+            src="{{this.image.url}}"
+            alt="{{this.title}}"
           />
         </a>
       {{else}}
         <p>No image available</p>
       {{/if}}
       <a class="movie-title" href="/movies/{{this.id}}">
-        {{this.attributes.title}}
+        {{this.title}}
       </a>
     </li>
   {{/each}}

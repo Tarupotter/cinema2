@@ -1,11 +1,11 @@
 
 
 <article class="movie">
-  <h1>{{ movie.attributes.title }}</h1>
-  {{#if movie.attributes.image }}
-  <img class="movie-page-image" src="{{ movie.attributes.image.url }}">
+  <h1>{{ movie.title }}</h1>
+  {{#if movie.image }}
+  <img class="movie-page-image" src="{{ movie.image.url }}">
   {{/if }}
   <div class="intro">
-    {{{ movie.attributes.intro }}}
+    {{{ movie.intro }}}
   </div>
 </article>
